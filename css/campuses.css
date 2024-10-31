@@ -1,0 +1,184 @@
+/* Hero Section */
+.hero-campuses {
+    height: 55vh;
+    background-image: url('../assets/campuses-hero-bg.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+   margin-top: 10vh;
+}
+
+.hero-campuses h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.hero-campuses p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Navigation Menu Section for Campuses */
+.nav-menu-section {
+    height: 45vh;
+    background-image: url('../assets/campuses-nav-bg.png');
+    background-color: #d2d2d2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+.nav-menu-section .menu-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.nav-menu-section .menu-content h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.nav-menu-section .menu-content p {
+    font-size: 0.7rem;
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.menu-btn {
+    display: inline-block;
+    white-space: nowrap;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 30px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    color: #000;
+    margin: 10px;
+    font-weight: 600;
+    border-width: 1.4px;
+    color: #000000;
+}
+
+.menu-btn:hover {
+    background-color: rgb(0, 0, 0);
+    transform: scale(1.05);
+    color: #ffffff;
+    border-color: white;
+    border-width: 1.5px;
+}
+
+
+
+/* Campus Section Template */
+.campus-content {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* Specific Campus Backgrounds */
+.iimsa-campus-section {
+    background-image: url('../assets/campuses-iiemsa-bg.png');
+    background-size: cover;
+    transition: ease-in-out 1s;
+}
+
+.ujapk-campus-section {
+    background-image: url('../assets/campuses-ujapk-bg.png');
+    background-size: cover;
+    transition: ease-in-out 1s;
+}
+
+.ujswc-campus-section {
+    background-image: url('../assets/campuses-ujswc-bg.png');
+    background-size: cover;
+    transition: ease-in-out 1s;
+}
+
+.wits-campus-section {
+    background-image: url('../assets/campuses-wits-bg.png');
+    background-size: cover;
+    transition: ease-in-out 1s;
+}
+
+.botswana-campus-section {
+    background-image: url('../assets/campuses-botswana-bg.png');
+    background-size: cover;
+    transition: ease-in-out 1s;
+}
+.up-campus-section {
+    background-image: url('../assets/campuses-up-bg.png');
+    background-size: cover;
+    transition: ease-in-out 1s;
+}
+/* .up-campus-section:hover,
+.botswana-campus-section:hover,
+.wits-campus-section:hover,
+.iimsa-campus-section:hover,
+.ujswc-campus-section:hover,
+.ujapk-campus-section:hover {
+    transform: scale(1.01);
+    transition: ease-in-out 1s;
+} */
+
+
+/* Styling for Campus Description */
+.campus-content{
+    /* align-items: center; */
+    text-align: center;
+    max-width: 60%;
+    margin-left: 2rem;
+    
+}
+
+
+
+.campus-description h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 0.9;
+}
+
+.campus-description h2 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.campus-purpose {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+.contact-info {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.black-seperate{
+    height: 10vh;
+    background-color: #ffffff;
+}

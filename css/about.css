@@ -1,0 +1,200 @@
+/* Hero Section */
+.html {
+    background-color: black;
+}
+
+.hero {
+    height: 55vh;
+    background-image: url('../assets/about-hero-bg.png'); /* Adjusted for About page */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding-top: 70px;
+    padding: 50px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Sticky Menu Bar */
+.menu-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    padding: 1px 0;
+height: 10vh;
+    z-index: 1000;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.menu-bar a:hover {
+    color: #FFA500;
+}
+
+/* Section Styling */
+.section {
+    background-size: cover;
+    padding: 150px 45px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.section h2, .section p {
+    margin: 0;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    color: #ffbf00;
+}
+
+.section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: white;
+    
+    
+}
+
+/* Centering container */
+.content {
+    max-width: 600px;
+}
+
+/* Section-specific colors and background images */
+.section-background {
+    background-image: url('../assets/about-background-bg.png');
+    color: #ffffff;
+}
+
+.section-beliefs {
+    background-image: url('../assets/about-beliefs-bg.png');
+    color: #000000;
+}
+
+.section-mission-vision {
+    background-image: url('../assets/about-mission-vision-bg.png');
+    color: #ffffff;
+}
+
+.section-vision-2027 {
+    background-image: url('../assets/about-vision-2027-bg.png');
+    color: #ffffff;
+}
+
+.styled-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0;
+    text-align: left;
+    
+}
+
+.styled-list li {
+    position: relative;
+    padding-left: 25px; /* Adds space for custom bullet */
+    margin-bottom: 10px;
+    color: #333; /* Set text color */
+    font-size: 1rem; /* Adjust font size */
+}
+
+.styled-list li::before {
+    content: "•"; /* Use a custom bullet, e.g., a dot */
+    position: absolute;
+    left: 0;
+    
+    font-size: 2rem; /* Size of bullet */
+}
+
+
+/* Right and Left Alignments */
+.section-background.right-align,
+.section-mission-vision.right-align {
+    justify-content: flex-end;
+    text-align: right;
+    padding-right: 90px;
+}
+
+
+.section-vision-2027.left-align {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.section-beliefs p{
+    color: black;
+    text-align: left;
+}
+
+.section-beliefs h2{
+    margin-top: 2rem;
+    color: black;
+    text-align: left;
+}
+
+
+.section-mission-vision p,
+
+.section-background p,
+
+.section-vision-2027 p{
+font-weight: 600;
+}
+
+.section-background h2,
+.section-mission-vision h2, 
+.section-vision-2027 h2{
+
+}
+
+/* Link Styling */
+.section .link {
+    color: #ffbf00;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.section .link:hover {
+    color: #FFA500;
+}
+
+.section-vision-2027 p{
+    margin-top: 5rem;
+    text-align: left;
+}
+
+.white-seperate{
+    height: 10vh;
+    background-color: #ffffff;
+}
+
+.black-seperate{
+    height: 10vh;
+    background-color: #0d0d0d;
+}

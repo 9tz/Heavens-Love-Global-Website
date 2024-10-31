@@ -1,0 +1,180 @@
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flexbox;
+}
+
+/* Navbar styles should be added here */
+
+/* Hero Section */
+.hero-firsttimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-top: 6rem;
+    transition: ease-in-out 1s;
+    cursor: default;
+    user-select: none;
+}
+
+.hero-title:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 1s;
+}
+
+/* Welcome Section */
+.welcome-section {
+    font-size: 1rem;
+    background-color: rgb(235, 235, 235);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+.welcome-content {
+    color: #000;
+    max-width: 55%;
+    text-align: center;
+}
+
+.welcome-content h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+
+/* Video Section */
+/* Video Section */
+.video-section {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgb(255, 255, 255);
+    min-height: 80vh;
+    
+    /* Flex layout to stack items vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between video and download button */
+}
+
+.video-container {
+    width: 70%; /* Adjust this to control the width of the video */
+    max-width: 800px; /* Optional max width */
+    aspect-ratio: 16 / 9; /* Maintain the video aspect ratio */
+    position: relative;
+    overflow: hidden;
+}
+
+.brochure-image{
+    transition: ease-in-out 1s;
+    border-radius: 10px;
+}
+
+.brochure-image:hover{
+    transform: scale(1.02);
+    transition: ease-in-out 1s;
+    border-radius: 10px;
+}
+.download-button a {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.download-button a:hover {
+    background-color: #333;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #e1e1e1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.contact-section form {
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.7rem;
+}
+
+.contact-section label {
+    font-weight: 600;
+}
+
+.contact-section input,
+.contact-section textarea,
+.contact-section select, /* Include dropdown in the styling */
+.contact-section button {
+    padding: 10px;
+    font-size: 1rem;
+   
+}
+
+.contact-section button{
+    font-weight: 900;
+}
+
+.contact-section button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-section button:hover {
+    background-color: #333;
+}
+
+/* Footer styles should be added here */
+
+/* Scroll to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+#back-to-top a {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}

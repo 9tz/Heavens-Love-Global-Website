@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publishing Store</title>
+    <!-- External CSS Links -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/publishing.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar (loaded from component) -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- <h1>Publishing Store</h1>
+            <p>Your exclusive access to all our merch and ministry material!</p> -->
+        </div>
+    </section>
+
+    <!-- Sticky Menu Bar -->
+    <div class="menu-bar" id="menu-bar">
+        <a href="#whatsnew">WHAT'S NEW?</a>
+      
+        <a href="#material  ">Book & Other Material</a>
+        <a href="#merch">MERCH</a>
+    </div>
+
+<!-- What's New Section -->
+<section id="whatsnew" class="whats-new-section">
+    <div class="whats-new-content">
+        <!-- <div class="whats-new-banner">
+            <h2>What’s NEW?</h2>
+        </div> -->
+        <div class="new-release">
+            <div class="get-yours-container">
+                <a href="/assets/files/alethia-realities.pdf" class="get-yours-button">GET YOURS!</a>
+      
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <div class="seperation-white"></div> -->
+
+<!-- Ministry Material Section -->
+<section id="material" class="material-section">
+    <div class="material-content">
+        <h1>Ministry Materials</h1>
+        <p>Get your very own copy of some of our books and other ministerial material</p>
+
+        <!-- Material Items -->
+        <div class="material-items">
+            <div class="material-item">
+                <img src="assets/publishing-material-book4.png" alt="Cell Ministry Manual">
+                <p>Cell Ministry Manual <br>(First Edition)</p>
+                <a href="assets/files/cell-ministry-manual.pdf" class="download-btn" download>Download</a>
+            </div>
+            <div class="material-item">
+                <img src="assets/publishing-material-book1.png" alt="Alethia Realities Today Devotional">
+                <p>Alethia Realities Today <br>(November Edition)</p>
+                <a href="assets/files/alethia-realities.pdf" class="download-btn" download>Download</a>
+            </div>
+            <div class="material-item">
+                <img src="assets/publishing-material-book2.png" alt="Alethia Realities Today (August Edition)">
+                <p>Prayer Booklet <br>(November Edition)</p>
+                <a href="assets/files/prayer-booklet.pdf" class="download-btn" download>Download</a>
+            </div>
+            <div class="material-item">
+                <img src="assets/publishing-material-book3.png" alt="Sunday Sermon Notes">
+                <p>Sunday Sermon Notes <br> (27 October 2024)</p>
+                <a href="assets/files/sunday-sermon-notes.pdf" class="download-btn" download>Download</a>
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+<!-- Merch Section -->
+<section id="merch" class="merch-section">
+    <!-- <div class="overlay"></div> -->
+    <div class="merch-content">
+        <!-- <div class="image-content">
+            <img src="assets/publishing-merch-people.png" alt="People in Merch" class="merch-people">
+        </div> -->
+        <div class="text-content">
+            <!-- <h1>GET YOUR MERCH</h1>
+            <p>Join the movement by getting your hands on our church merchandise!</p> -->
+            <!-- <div class="buttons">
+                <a href="#" class="btn white-btn">VIEW CATALOG</a>
+                <a href="#" class="btn yellow-btn">ORDER NOW</a> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+    <!-- Scroll to Top Button -->
+    <div id="scroll-to-top-placeholder"></div>
+    <script>
+        fetch('components/scroll-to-top.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('scroll-to-top-placeholder').innerHTML = data;
+            });
+    </script>
+
+
+
+<button id="scroll-to-top" class="scroll-to-top">&uarr;</button>
+
+ <!-- Footer Placeholder -->
+ <div id="footer-placeholder"></div>
+
+ <!-- Script to load the footer -->
+ <script>
+     fetch('components/footer.html') // Adjust this path as needed
+         .then(response => response.text())
+         .then(data => {
+             document.getElementById('footer-placeholder').innerHTML = data;
+         });
+ </script>
+
+
+    <!-- External JS -->
+    <script src="scripts/global.js"></script>
+    <script src="scripts/publishing.js"></script>
+    <script src="scripts/navbar.js"></script>
+</body>
+
+</html>

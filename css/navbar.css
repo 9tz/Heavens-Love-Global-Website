@@ -1,0 +1,83 @@
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 0.2rem 0.5rem;
+  transition: background-color 0.3s, box-shadow 0.3s, height 0.3s; /* Added height transition */
+  background-color: white;
+  align-content: center;
+  height: 14vh;
+}
+
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 10px; */
+    
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 4rem;
+    transition: height 0.3s;
+  }
+  
+  .site-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    margin-left: 1rem;
+  }
+  
+  /* Navbar Links */
+  .nav-links ul { 
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end; /* Right Align */
+  }
+  
+  .nav-links ul li {
+    margin-left: 20px;
+  }
+  
+  .nav-links ul li a {
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600; /* Lighter text weight */
+    transition: ease-in-out 0.5s;/* Apply a smooth transition */
+    font-size: 0.7rem;
+    
+    
+  }
+  
+  .nav-links ul li a:hover {
+
+    font-weight: 600;
+    transition: ease-in-out 0.2s;
+    transform: scale(1.1); 
+  }
+  
+  /* Social Icons */
+  .social-icons a {
+    color: rgb(0, 0, 0);
+    font-size: 0.7rem;
+    margin-left: 15px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: rgb(255, 187, 0); /* Optional hover color for social icons */
+  }
+  

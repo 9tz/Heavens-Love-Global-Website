@@ -1,84 +1,58 @@
+
+       
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heavens Love Global</title>
+   <title>Heavens Love Global</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/landingpage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/navbar.css">
 </head>
 
 <body>
+    <!-- Placeholder for Navbar -->
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
 
-    <!-- Navbar -->
-    <header class="navbar transparent">
-        <div class="navbar-container">
-            <div class="logo-container">
-                <img src="assets/HLGLOGO.png" alt="Heavens Love Global" class="logo">
-                <span class="site-title">HEAVENS LOVE GLOBAL.</span>
-                <a href="index.html"></a>
-            </div>
-      
-            <nav class="nav-links">
-                <ul>
-                    <li><a href="#">Next Steps</a></li>
-                    <li><a href="#">What's On</a></li>
-                    <li><a href="#">Location</a></li>
-                    <li><a href="#">Connect</a></li>
-                </ul>
-            </nav>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                
-            </div>
-            
+    <!-- Script to load the Navbar -->
+    <script>
+        fetch('/components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>   
 
-            <!-- <div class="hamburger-menu">
-          
-                <i class="fa-solid fa-bars"></i>
-            </div> -->
-           
-        </div>
-    </header>
-
-<!-- Hero Section -->
-<section class="hero">
+<section id="home" class="hero">
     <div class="hero-content">
-        <!-- Top Subsection: Image Slider -->
+        <!-- Hero Top Section -->
         <div class="hero-top">
-            <div class="slider">
-
-                    
-                </div>
-            </div>
-            <!-- Slide Indicators -->
-            <div class="slider-indicators">
-                <span class="indicator active"></span>
-                <span class="indicator"></span>
-                <span class="indicator"></span>
-            </div>
+    
         </div>
+    
 
-        <!-- Bottom Subsection: Service Times and Call to Actions -->
+        <!-- Hero Bottom Section: Service Times and Call to Actions -->
         <div class="hero-bottom">
             <div class="cta-section">
                 <div class="cta-item">
-                    <p>Service Times</p>
-                    <span>09:30 - 12:00</span>
-                    <button class="cta-button">Location</button>
+                    <!-- <p>Church</p> -->
+                    <p>Church Service Times</p>
+                    <a href="campuses.html"><button class="cta-button">View Here</button></a>
+                </div> 
+                <div class="cta-item">
+                    <p>Today I decided <br> to follow Jesus</p>
+                   <a href="gettingstarted.html"><button class="cta-button">View Here</button></a> 
                 </div>
                 <div class="cta-item">
-                    <p>Today I decided to follow Jesus</p>
-                    <button class="cta-button">VIEW HERE</button>
-                </div>
-                <div class="cta-item">
-                    <p>First Timer?</p>
-                    <span>View our online brochure & other useful ministry material</span>
-                    <button class="cta-button">VIEW HERE</button>
+                    <p>First Timer? <br>
+                    View Our Online Brochure</p>
+                   <a href="firsttimer.html" target="_blank"><button class="cta-button">VIEW HERE</button> </a> 
                 </div>
             </div>
         </div>
@@ -86,15 +60,378 @@
 </section>
 
 
-    <!-- Other Sections -->
-    <!-- (Content of other sections remains the same) -->
+<section class="senior-pastor-section">
+    <video autoplay muted loop class="background-video">
+        <source src="../assets/seniorpastor-bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="senior-pastor-bg">
+    
+        <div class="text-content">
+            <!-- <h1>#PioneeringANewDispensation!</h1> -->
+            <h2>SENIOR PASTOR</h2>
+            <h3>Pastor Yiannis</h3>
+            <h4>Teacher | Author | Lawyer</h4>
+            <p>
+                Reverend Yiannis Markus, Founder and President of Heavens Love, is a passionate and dynamic leader with the heart for reaching the world through the power of God’s Word. Called into ministry from a very early age, he has faithfully served the Lord for over 10 years, inspiring and guiding countless people toward living a victorious and purposeful life in Christ.
+            </p>
+            <div class="follow-platforms">
+                <p>FOLLOW PASTOR YIANNIS</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100079625864458"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@pastoryiannis"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/pastoryiannis/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Giving Section -->
-    <!-- (Content of the Giving section remains the same) -->
 
-    <!-- Footer -->
-    <!-- (Content of the Footer remains the same) -->
 
-    <script src="scripts/main.js"></script>
-</body>
-</html>
+    <!-- What's On Section -->
+        <!-- <section id="whats-on" class="whats-on-section">
+            <div class="whats-on-content">
+                <img src="assets/whats-on.png" alt="Campus Night of Worship" class="whats-on-img">
+                <div class="overlay-purple"></div>
+                <div class="whats-on-text">
+                    <h2>CAMPUS NIGHT </br> OF WORSHIP</h2>
+                    <p class="venuetime">This Friday @ UJ SOWETO</p>
+                    <p>18:00 - 20:00 | 11 October 2024</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScgyWkItureOrgrirCVINDGXjT9V5TTLs73EQpcm4editP1Qg/viewform"><button class="whats-on-button-outline">Register Now</button></a>
+                </div>
+            </div>
+        </section> -->
+
+    <section id="next-steps" class="next-steps-section">
+        <div class="overlay"></div>
+        <div class="next-steps-content">
+            <h2>Next Steps</h2>
+            <p>Explore how you can progress further in Christ and <br> get involved at Heavens Love Global</p>
+            <div class="next-steps-buttons">
+                <a href="gettingstarted.html#baptism" class="next-step-link">
+                    <div class="next-step-card">
+                        <span>Baptism</span>
+                        <!-- <i class="fas fa-arrow-right"></i> -->
+                    </div>
+                </a>
+                <a href="gettingstarted.html#salvation" class="next-step-link">
+                    <div class="next-step-card">
+                        <span>Salvation</span>
+                        <!-- <i class="fas fa-arrow-right"></i> -->
+                    </div>
+                </a>
+                <a href="gettingstarted.html#cell-groups" class="next-step-link">
+                    <div class="next-step-card">
+                        <span>Cell Groups</span>
+               
+                    </div>
+                </a>
+    
+                <!-- <a href="evangelism.html" class="next-step-link">
+                    <div class="next-step-card">
+                        <span>Let's Evangelize</span>
+                      
+                    </div>
+                </a> -->
+    
+                
+                <a href="minesterialarms.html" class="next-step-link">
+                    <div class="next-step-card">
+                        <span>Ministerial Arms</span>
+                       
+                    </div>
+                </a>
+                <!-- <a href="finance.html#partner-now" class="next-step-link">
+                    <div class="next-step-card">
+                        <span>Partner</span>
+                     
+                    </div>
+                </a> -->
+    
+                <a href="gettingstarted.html#serving" class="next-step-link">
+                    <div class="next-step-card">
+                        <span>I Want To Serve!</span>
+      
+                    </div>
+                </a>
+
+                <a href="campuses.html" class="next-step-link">
+                    <div class="next-step-card">
+                        <span>Campuses</span>
+      
+                    </div>
+                </a>
+    
+            
+    
+                
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Publishing Section -->
+    <section class="publishing-section">
+       
+        <div class="publishing-text">
+<a href="publishing.html"><button class="pub-button">Go To Store  <i class="fa-solid fa-arrow-right"></i></i></button></a>
+        </div>
+    </section>
+
+
+
+<section class="youtube-section">
+    <!-- YouTube Video Player (Left side) -->
+    <!-- <div class="youtube-player">
+        <iframe 
+            width="600" 
+            height="600" 
+            src="https://www.youtube.com/embed/JnrKkNQPyzI" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+
+    </div> -->
+
+    <!-- Text Section with Overlay (Right side) -->
+    <div class="youtube-text">
+        <h2>WATCH SERMONS</h2>
+        <p>Watch our latest sermons </br> on our official Facebook page</p>
+        <!-- <img src="assets/youtube-logo.png" alt="YouTube Logo" class="youtube-logo"> -->
+        <a href="https://www.facebook.com/heavenslove.global"><i class="fab fa-facebook-f"> </i>  Pastor Yiannis Markus</a> 
+
+    </div>
+    <!-- <div class="youtube-overlay">
+        
+    </div> -->
+</section>
+
+    <section class="sub">
+        <a href="https://www.facebook.com/100079625864458/videos/850796123881437" target="_blank">
+            <img src="/assets/youtube-vid1.png" alt="Video 1">
+        </a>
+        <a href="https://www.facebook.com/100079625864458/videos/1047747540006047" target="_blank">
+            <img src="/assets/youtube-vid2.png" alt="Video 2">
+        </a>
+        <a href="https://www.facebook.com/100079625864458/videos/848726214096569" target="_blank">
+            <img src="/assets/youtube-vid3.png" alt="Video 3">
+        </a>
+        <a href="https://www.facebook.com/link-to-video4" target="_blank">
+            <img src="/assets/youtube-vid4.png" alt="Video 4"> <!--Cant find how to get rev!!-->
+        </a>
+        <a href="https://www.facebook.com/100079625864458/videos/1244821056714963" target="_blank">
+            <img src="/assets/youtube-vid5.png" alt="Video 5">
+        </a>
+        <a href="https://www.facebook.com/100079625864458/videos/3833918910269825" target="_blank">
+            <img src="/assets/youtube-vid6.png" alt="Video 6">
+        </a>
+    </section>
+    
+
+    <!-- <section class="prayer-req-section">
+       Prayer Request/Praise Report Section 
+        <div class="prayer-request-section">
+            <div class="overlay"></div>
+            <div class="prayer-content">
+                <h2>Praise Report &amp; Prayer Requests</h2>
+                <p>Do you have a testimony, or a prayer request? </br>Get in touch with us!</p>
+                <button class="submit-btn">SUBMIT NOW</button>
+            </div>
+        </div>
+    </section> -->
+<!--  Programs Section -->
+
+<!-- <section class="programs-section">
+    <h2 class="programs-title">Upcoming Programmes</h2>
+       <h2 class="programs-title">STAY TUNED...</h2> 
+   <div class="tba-programmes"><img src="assets/landingpage-upcoming.png" alt=""></div>
+    <div class="programs-carousel-container">
+        <div class="programs-carousel">
+            Program Cards 
+            <div class="program-card highlight">
+                <img src="assets/programs-3.png" alt="Program 1" class="program-image">
+                <div class="program-info">
+                    <button class="view-more-btn">VIEW MORE</button>
+                    <p class="program-name">Global Healing Camp 2024</p>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <img src="assets/programs-2.png" alt="Program 2" class="program-image">
+                <div class="program-info">
+                    <button class="view-more-btn">VIEW MORE</button>
+                    <p class="program-name">SOM: Zandspruit Crusade</p>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <img src="assets/programs-1.png" alt="Program 3" class="program-image">
+                <div class="program-info">
+                    <button class="view-more-btn">VIEW MORE</button>
+                    <p class="program-name">Campus Night of Worship: Martin PK</p>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <img src="assets/programs-1.png" alt="Program 3" class="program-image">
+                <div class="program-info">
+                    <button class="view-more-btn">VIEW MORE</button>
+                    <p class="program-name">Campus Night of Worship: Martin PK</p>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <img src="assets/programs-1.png" alt="Program 3" class="program-image">
+                <div class="program-info">
+                    <button class="view-more-btn">VIEW MORE</button>
+                    <p class="program-name">Campus Night of Worship: Martin PK</p>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <img src="assets/programs-1.png" alt="Program 3" class="program-image">
+                <div class="program-info">
+                    <button class="view-more-btn">VIEW MORE</button>
+                    <p class="program-name">Campus Night of Worship: Martin PK</p>
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+
+    <!-- Scroll Arrows with FontAwesome Icons -->
+    <!-- <button class="scroll-arrow left">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="scroll-arrow right">
+        <i class="fas fa-chevron-right"></i>
+    </button> -->
+
+
+</section>
+
+<section id="campuses" class="campuses-section">
+
+    <div class="campuses-content">
+        <h2>Our Campuses</h2>
+        <p>Experience the heartbeat of Heavens Love across our campuses! <br> Join a vibrant community near you and be part of something extraordinary in Christ</p>
+        <div class="campuses-buttons">
+            <a href="campuses.html#iiemsa-campus" class="campuses-link">
+                <div class="next-step-card">
+                    <span>IIEMSA</span>
+                </div>
+            </a>
+            <a href="campuses.html#ujapk-campus" class="campuses-link">
+                <div class="campuses-card">
+                    <span>UJ APK</span>
+                
+                </div>
+            </a>
+            <a href="campuses.html#ujswc-campus" class="campuses-link">
+                <div class="campuses-card">
+                    <span>UJ SWC</span>
+           
+                </div>
+            </a>
+            <a href="campuses.html#wits-campus" class="campuses-link">
+                <div class="campuses-card">
+                    <span>Wits</span>
+           
+                </div>
+            </a>
+            <a href="campuses.html#botswana-campus" class="campuses-link">
+                <div class="campuses-card">
+                    <span>University Of Botswana</span>
+                </div>
+            </a>
+
+        
+
+            
+        </div>
+    </div>
+
+</section>
+      
+        
+
+<section class="next-giving-section">
+       <!-- Next Steps Section -->
+
+
+        <!-- Giving Section -->
+        <div id="giving-section" class="giving-section">
+            <div class="giving-gradient"></div>
+            <div class="giving-content">
+                <div class="giving-eft">
+                    <h2>PARTNER WITH <br> US</h2>
+                    <p>Sow your seed and be blessed!</p>
+                </div>
+           
+
+           
+     
+            
+            <!-- PayPal Donation Form -->
+            <form action="https://www.paypal.com/donate" method="post" target="_top" class="paypal-donate-form">
+                <input type="hidden" name="hosted_button_id" value="9RQBLC7ZFDENJ" />
+                <button type="submit" class="give-now-btn">Give Now</button>
+                <img src="assets/cards-visa-master.png" alt="Visa and MasterCard" class="card-logo">
+            </form>
+                        
+        </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Placeholder for Scroll-to-Top Button -->
+<div id="scroll-to-top-placeholder"></div>
+
+<!-- Script to load the Scroll-to-Top Button -->
+<script>
+    fetch('components/scroll-to-top.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('scroll-to-top-placeholder').innerHTML = data;
+
+            // Ensure the button exists before adding the event listeners
+            const scrollToTopButton = document.getElementById('scroll-to-top');
+            if (scrollToTopButton) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 300) {
+                        scrollToTopButton.style.display = 'flex';
+                    } else {
+                        scrollToTopButton.style.display = 'none';
+                    }
+                });
+
+                scrollToTopButton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+</script>
+        <script src="scripts/global.js"></script>
+        <script src="scripts/landingpage.js"></script>
+        <script src="scripts/navbar.js"></script>
+
+        <!-- Footer Placeholder -->
+<div id="footer-placeholder"></div>
+
+<!-- Script to load the footer -->
+<script>
+    fetch('components/footer.html') // Adjust this path as needed
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+</script>
+    </body>
+    </html>

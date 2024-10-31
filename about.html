@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- External CSS Links -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar (loaded from component) -->
+    <div id="navbar-placeholder"></div>
+    <script>
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- <h1>About Us</h1>
+            <p><em>Discover who we are and our mission</em></p> -->
+        </div>
+    </section>
+
+    <!-- Sticky Menu Bar -->
+    <div class="menu-bar" id="menu-bar">
+        <a href="#background">Our Story</a>
+        <a href="#beliefs">Our Beliefs</a>
+        <a href="#mission-vision">Mission & Vision</a>
+        <a href="#vision-2027">Vision 2027</a>
+    </div>
+
+    <!-- Background Section -->
+    <section id="background" class="section section-background right-align">
+        <div class="section">
+            <div class="content">
+             
+                
+                <h2>Our Story</h2>
+                <p>Heavens Love Global was born from a Spirit-inspired calling in late 2020, when Reverend Yiannis Markus felt led to plant a church on the IIEMSA campus in South Africa. What began as a small campus fellowship quickly blossomed into a thriving Christian community, impacting students with the powerful message of Christ. Driven by the Holy Spirit, Heavens Love has since expanded beyond the campus, reaching out to underserved communities like Zandspruit and transforming countless lives.
+
+                   <br> <br> Today, Heavens Love Global embraces a growing online presence and has extended across borders to multiple campuses, including the University of Botswana and various South African universities. With a vision that’s "too global to be local," the ministry is passionately committed to spreading hope and transformation across nations, fulfilling its divine mission to reach the world with the gospel. Join us as we carry this light forward.</p>
+            </div>
+        </div>
+    </section>
+    <div class="white-seperate"></div>
+    <!-- Beliefs Section -->
+    <section id="beliefs" class="section section-beliefs left-align">
+        <div class="section">
+            <div class="content">
+                <h2>Our Beliefs</h2>
+               <p>We stand on the authority of the Bible, embracing <strong>sola scriptura</strong>, meaning Scripture alone is our ultimate guide. God's Word grounds us in truth and wisdom.</p>
+                <p>Our beliefs are rooted in the following key truths:</p>
+                <p >Our core beliefs are rooted in the Bible as our ultimate guide. We affirm the existence of one eternal God in three expressions—Father, Son, and Holy Spirit. Jesus Christ, 
+                    fully divine and human, was born of a virgin, died, rose again, and ascended to heaven, providing salvation by grace through faith. The Holy Spirit empowers believers with gifts for the Church's 
+                    growth. We look forward to the rapture, Jesus’ return, and eternal life for the saved, while recognizing the judgment of the lost. Through the Holy Spirit, we are called to serve as Christ's ambassadors in the world.</p>
+   <p>Through the Holy Spirit, we are empowered for service, called to be ambassadors of Christ in every sphere of life.</p>
+            </div>
+        </div>
+    </section>
+    <div class="white-seperate"></div>
+    <!-- Mission & Vision Section -->
+    <section id="mission-vision" class="section section-mission-vision right-align">
+        <div class="section">
+            <div class="content">
+                <h2>Our Mission & Vision</h2>
+                <p><strong>Vision:</strong> To spread the gospel of Jesus Christ through the demonstration of God’s power at work in us!</p>
+                <p><strong>Mission:</strong> We aim to be a sanctuary where all people can encounter God’s divine presence, love, and grace. Our doors are open to everyone, regardless of background, welcoming them to experience the transformative power of the Holy Spirit.</p>
+                <p>Inspired by the Holy Spirit, we are dedicated to embodying and sharing God’s love with a world in need of His touch, inviting all to experience His grace, forgiveness, and life-changing power.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="black-seperate"></div>
+
+    <!-- Vision 2027 Section -->
+    <section id="vision-2027" class="section section-vision-2027 left-align">
+        <div class="section">
+            <div class="content">
+              
+                <p>Vision 2027 is a divine mandate given to Reverend Yiannis to see Heavens Love Global expand and impact lives on a global scale. Inspired by the theme of “takeover,” this vision seeks to establish Heavens Love Global on campuses throughout the SADC region and beyond.
+                <br><br>With a mission to ignite a movement fueled by the Holy Spirit, we aim to spread the gospel across the nations, working through our dedicated ministerial arms and leaders to accomplish this God-given goal. By 2027, we envision a world touched by the love of Christ, with Heavens Love Global at the forefront of a spiritual revival that transcends borders.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <div id="scroll-to-top-placeholder"></div>
+    <script>
+        fetch('components/scroll-to-top.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('scroll-to-top-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <button id="scroll-to-top" class="scroll-to-top">&uarr;</button>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('components/footer.html') // Adjust this path as needed
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- External JS -->
+    <script src="scripts/about.js"></script>
+    <script src="scripts/navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,573 @@
+
+/* Hero Section */
+.hero-min-arms {
+ 
+    height: 55vh; /* Hero section gets 35% of total height */
+    background-image: url('../assets/iwts-hero-bg.png');
+    background-size: cover;
+    color: white;
+    background-color: red;
+    margin-top: 13vh;
+
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 900;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    /* padding: 20px; */
+    font-weight: 500;
+}
+
+/* Navigation Menu Section */
+.nav-menu-section {
+    height: 30vh; /* Nav menu gets 65% of total height */
+    background-image: url('../assets/nav-menu-section.png');
+background-color: #0c0c0c;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 0.7rem;
+}
+
+/* .nav-menu-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 255, 0.7), transparent); x  
+    z-index: 1;
+} */
+
+.nav-menu-section .menu-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  
+}
+
+.nav-menu-section .menu-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-menu-section .menu-content p {
+    font-size: 15px;
+    /* margin-top: 10px; */
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* margin-top: 20px; */
+    padding: 10px;
+}
+
+.menu-btn {
+    display: inline-block; /* Behaves like inline element but respects width and padding */
+    white-space: nowrap; /* Ensure text stays on one line */
+    background-color: rgb(255, 255, 255); /* Same background as next-step-card */
+    padding: 5px 30px; /* Same padding as next-step-card */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 13px; /* Same font size */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth animation */
+    color: #000; /* Black text */
+    margin: 10px; /* Add margin to create space between buttons */
+    font-weight: 600;
+    border-width: 1.4px;
+    color: #000000; /* White text on hover */
+  }
+  
+  .menu-btn:hover {
+    background-color: rgb(0, 0, 0); /* Change background on hover */
+    transform: scale(1.05);
+    color: #ffffff; /* White text on hover */
+    border-color: white;
+    border-width: 1.5px;
+
+  }
+
+  /* General Formatting */
+  .ministry-description{
+align-items: center;
+justify-content: center;
+  }
+  
+
+  .director-avatar img {
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+ 
+}
+
+
+.ministry-description h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+  
+    letter-spacing: -4px;
+}
+  
+
+.ministry-description h2 {
+    font-size: 1.5rem;
+ margin-top: 1rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.ministry-purpose {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 25rem;
+}
+
+.section-content{
+    display: flex;
+    /* align-items: center; */
+    margin-top: 4rem;
+    justify-content: center;
+    gap: 4rem;
+    flex: 1;
+}
+
+
+.director-name{
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-weight: 400;
+
+}
+
+.director-title{
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-size: 1.0rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-style: oblique;
+    letter-spacing: -1px;
+}
+
+
+.example{
+    font-weight: 900;
+
+}
+
+/* Music Ministry Section */
+.music-ministry-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../assets/iwts-music-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    /* padding: 50px 20px; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
+}
+
+
+
+
+
+
+
+
+.highlight-music {
+    color: #FFA500; /* Orange color to highlight */
+    font-weight: 900;
+}
+
+.highlight-music-join{
+    color: #FFA500; /* Orange color to highlight */
+    font-weight: bold;
+}
+
+/* Publishing Ministry Section */
+.publishing-ministry-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../assets/iwts-publishing-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    /* padding: 50px 20px; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
+}
+
+.highlight-publishing {
+    color: #FFA500;
+    font-weight: 900;
+}
+
+.highlight-publishing-join {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+/* Networks Ministry Section */
+.networks-ministry-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../assets/iwts-networks-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    /* padding: 50px 20px; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
+}
+
+/* Join Networks Ministry Section */
+.join-networks-ministry-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../assets/iwts-networks-bg2.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.highlight-networks {
+    color: #FFA500;
+    font-weight: 900;
+}
+
+.highlight-networks-join {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+/* Holdings Ministry Section */
+.holdings-ministry-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../assets/iwts-holdings-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    /* padding: 50px 20px; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
+}
+
+
+/* Join Holdings Ministry Section */
+.join-holdings-ministry-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../assets/iwts-holdings-bg2.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.highlight-holdings {
+    color: #FFA500;
+    font-weight: 900;
+}
+
+.highlight-holdings-join {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+/* Ushering and Protocol Ministry Section */
+.up-ministry-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../assets/iwts-up-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    /* padding: 50px 20px; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
+}
+
+
+
+/* Join Ushering and Protocol Ministry Section */
+.join-up-ministry-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../assets/iwts-up-bg2.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.highlight-up {
+    color: #FFA500;
+    font-weight: 900;
+}
+
+.highlight-up-join {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+/* Secretariat Ministry Section */
+.secretariat-ministry-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../assets/iwts-secretariat-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    /* padding: 50px 20px; */
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
+}
+
+
+
+/* Join Secretariat Ministry Section */
+.join-secretariat-ministry-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../assets/iwts-secretariat-bg2.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.highlight-secretariat {
+    color: #FFA500;
+    font-weight: 900;
+}
+
+.highlight-secretariat-join {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+
+
+/* General Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General Scale-up Animation */
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* General Delays for Staggered Animations */
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0; /* Start invisible */
+}
+
+.scale-up {
+    animation: scaleUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+.fade-in-delay-1 {
+    animation-delay: 0.3s;
+}
+
+.fade-in-delay-2 {
+    animation-delay: 0.6s;
+}
+
+.fade-in-delay-3 {
+    animation-delay: 0.9s;
+}
+
+/* Applying Animations to Elements */
+.hero,
+.nav-menu-section,
+.music-ministry-section,
+.publishing-ministry-section,
+.networks-ministry-section,
+.holdings-ministry-section,
+.up-ministry-section,
+.secretariat-ministry-section,
+.evangelism-ministry-section,
+.cell-ministry-section,
+.finance-ministry-section {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+.ministry-description h1,
+.ministry-description h2,
+.director-avatar img,
+.join-info h1 {
+    opacity: 0;
+    animation: scaleUp 0.8s ease-out forwards;
+}
+
+.director-avatar img {
+    animation-delay: 0.4s;
+}
+
+.ministry-description h1,
+.join-info h1 {
+    animation-delay: 0.6s;
+}
+
+.ministry-purpose,
+.subtitle,
+.highlight-music,
+.highlight-music-join,
+.highlight-publishing,
+.highlight-networks,
+.highlight-holdings,
+.highlight-up,
+.highlight-secretariat,
+.highlight-evangelism,
+.highlight-cell,
+.highlight-finance {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+.menu-buttons .menu-btn {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Staggered Animation for Menu Buttons */
+.menu-buttons .menu-btn:nth-child(1) {
+    animation-delay: 0.6s;
+}
+.menu-buttons .menu-btn:nth-child(2) {
+    animation-delay: 0.8s;
+}
+.menu-buttons .menu-btn:nth-child(3) {
+    animation-delay: 1s;
+}
+.menu-buttons .menu-btn:nth-child(4) {
+    animation-delay: 1.2s;
+}
+.menu-buttons .menu-btn:nth-child(5) {
+    animation-delay: 1.4s;
+}
+.menu-buttons .menu-btn:nth-child(6) {
+    animation-delay: 1.6s;
+}
+.menu-buttons .menu-btn:nth-child(7) {
+    animation-delay: 1.8s;
+}
+.menu-buttons .menu-btn:nth-child(8) {
+    animation-delay: 2s;
+}
+
+/* Additional Smooth Hover Animations */
+.menu-btn:hover {
+    transform: scale(1.08) !important;
+    transition: transform 0.3s ease;
+}
+
+.director-avatar img:hover {
+    transform: scale(1.05) !important;
+    transition: transform 0.3s ease;
+}
+
+.hero,
+.nav-menu-section,
+.music-ministry-section,
+.join-music-ministry-section,
+.publishing-ministry-section,
+.join-publishing-ministry-section,
+.networks-ministry-section,
+.join-networks-ministry-section,
+.holdings-ministry-section,
+.join-holdings-ministry-section,
+.up-ministry-section,
+.join-up-ministry-section,
+.secretariat-ministry-section,
+.join-secretariat-ministry-section,
+.evangelism-ministry-section,
+.join-evangelism-ministry-section,
+.cell-ministry-section,
+.join-cell-ministry-section,
+.finance-ministry-section,
+.join-finance-ministry-section {
+    opacity: 0; /* Hidden by default */
+}
+

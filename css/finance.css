@@ -1,0 +1,252 @@
+/* Hero Section */
+.hero {
+    height: 50vh;
+    background-image: url('../assets/finance-hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Sticky Menu Bar */
+.menu-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    padding: 15px 0;
+    border-bottom: 2px solid #f1f1f1;
+    z-index: 1000;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.menu-bar a:hover {
+    color: #28a745; /* Highlight color */
+}
+
+/* Partner Now Section */
+.partner-now-section {
+    height: 100vh;
+    background-image: url('../assets/finance-partner-now-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input,
+.radio-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.radio-group label {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+#other-reason {
+    margin-top: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+/* Ministry Details Section */
+.ministry-details-section {
+    height: 100vh;
+    background-image: url('../assets/finance-details-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+}
+
+.ministry-details-content {
+    background: linear-gradient(to left, rgba(255, 0, 0, 0.7), transparent);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* About Section */
+.about-section {
+    height: 100vh;
+    position: relative;
+    background-image: url('../assets/finance-about-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+}
+
+.director-avatar img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+.ministry-description h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.ministry-description h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.director-name {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.ministry-purpose {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+.finance-gradient-rectangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(45deg, green, yellow);
+    transform: rotate(-10deg);
+}
+
+/* Footer Section */
+.finance-footer {
+    background-color: #28a745; /* Green background */
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-text p i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #FFC107; /* Yellow highlight */
+}
+
+/* Footer Logo */
+.footer-logo img {
+    max-width: 200px;
+    height: auto;
+}

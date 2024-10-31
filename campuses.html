@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavens Love Campuses</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/campuses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+    <!-- Navbar (reusing navbar.html component) -->
+    <header>
+        <!-- Assuming navbar.html is included using server-side includes or a framework -->
+    </header>
+
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Script to load the Navbar -->
+    <script>
+        fetch('/components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero-campuses">
+        <div class="hero-content-campuses">
+            <!-- <h1>Our Campuses</h1> -->
+        </div>
+    </section>
+
+    <!-- Campus Navigation Menu Section -->
+<section class="nav-menu-section">
+    <div class="overlay"></div>
+    <div class="menu-content">
+        <h2>Explore Our Campuses</h2>
+        <p>Discover the heartbeat of Heavens Love across all our campuses and find a vibrant community near you!<br>
+        Click below to explore or contact a leader in a campus near you</p>
+        <div class="menu-buttons">
+            <a href="#iiemsa-campus" class="menu-btn">IIEMSA</a>
+            <a href="#ujapk-campus" class="menu-btn">UJ APK</a>
+            <a href="#ujswc-campus" class="menu-btn">UJ SWC</a>
+            <a href="#wits-campus" class="menu-btn">Wits</a>
+            <a href="#botswana-campus" class="menu-btn">University of Botswana</a>
+            <a href="#up-campus" class="menu-btn">UP</a>
+            
+        </div>
+    </div>
+</section>
+
+
+    <!-- IIEMSA Section -->
+    <section id="iiemsa-campus" class="iimsa-campus-section">
+        <div class="campus-content">
+            <!-- <div class="director-avatar">
+                <img src="assets/iiemsa-avatar.png" alt="IIEMSA Campus">
+            </div> -->
+            <div class="campus-description">
+                <h1>IIEMSA</h1>
+                <h2>ABOUT IIEMSA CAMPUS</h2>
+                <p class="campus-purpose">At IIEMSA, Heavens Love brings students together for fellowship, worship, and community. Engage with others who are passionate about their faith and eager to make a difference.</p>
+                <p class="contact-info">For inquiries about joining cell groups or fellowships, please contact the provided details</p>
+            </div>
+        </div>
+    </section>
+<div class="black-seperate"></div>
+    <!-- UJAPK Section -->
+    <section id="ujapk-campus" class="ujapk-campus-section">
+        <div class="campus-content">
+            <!-- <div class="director-avatar">
+                <img src="assets/ujapk-avatar.png" alt="UJAPK Campus">
+            </div> -->
+            <div class="campus-description">
+                <h1>UJ APK</h1>
+                <h2>ABOUT UNIVERSITY OF JOHANNESBURG APK</h2>
+                <p class="campus-purpose">At UJ APK, Heavens Love creates an energetic space where students can experience Jesus and His endless love. Join us and be part of something extraordinary!</p>
+                <p class="contact-info">For inquiries about joining cell groups or fellowships, please contact the provided details</p>
+            </div>
+        </div>
+    </section>
+    <div class="black-seperate"></div>
+    <!-- UJSWC Section -->
+    <section id="ujswc-campus" class="ujswc-campus-section">
+        <div class="campus-content">
+            <!-- <div class="director-avatar">
+                <img src="assets/ujswc-avatar.png" alt="UJSWC Campus">
+            </div> -->
+            <div class="campus-description">
+                <h1>UJ SWC</h1>
+                <h2>ABOUT UNIVERSITY OF JOHANNESBURG SOWETO</h2>
+                <p class="campus-purpose">UJ SWC is home to a passionate community dedicated to encountering Christ and deepening His love in our lives. Come and see what Heavens Love has in store for you!</p>
+                <p class="contact-info">For inquiries about joining cell groups or fellowships, please contact the provided details</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="black-seperate"></div>
+    <!-- University of Botswana Section -->
+<section id="botswana-campus" class="botswana-campus-section" >
+    
+    <div class="campus-content">
+            <!-- <div class="director-avatar">
+                <img src="assets/botswana-avatar.png" alt="University of Botswana Campus">
+            </div> -->
+        <div class="campus-description">
+            <h1>University of Botswana</h1>
+            <h2>ABOUT UNIVERSITY OF BOTSWANA CAMPUS</h2>
+            <p class="campus-purpose">Join us at the University of Botswana for a fellowship like no other, where students are transformed by the love and grace of Jesus. Let’s journey together!</p>
+            <p class="contact-info">For inquiries about joining cell groups or fellowships, please contact the provided details</p>
+        </div>
+    </div>
+</section>
+<div class="black-seperate"></div>
+    <!-- Wits Section -->
+    <section id="wits-campus" class="wits-campus-section">
+        <div class="campus-content">
+                <!-- <div class="director-avatar">
+                    <img src="assets/wits-avatar.png" alt="Wits Campus">
+                </div> -->
+            <div class="campus-description">
+                <h1>Wits</h1>
+                <h2>ABOUT UNIVERSITY OF WITWATERSRAND</h2>
+                <p class="campus-purpose">Get ready, Wits! In 2025, we’re bringing a vibrant, transformative fellowship where you’ll encounter the love and presence of Jesus in a powerful way. We can’t wait to meet you!</p>
+                <!-- <p class="contact-info">For inquiries about joining cell groups or fellowships, please contact the provided details</p> -->
+            </div>
+        </div>
+    </section>
+    <div class="black-seperate"></div>
+        <!-- Wits Section -->
+        <section id="up-campus" class="up-campus-section">
+            <div class="campus-content">
+                <!-- <div class="director-avatar">
+                    <img src="assets/up-avatar.png" alt="Wits Campus">
+                </div> -->
+                <div class="campus-description">
+                    <h1>University Of Pretoria</h1>
+                    <h2>ABOUT UP</h2>
+                    <p class="campus-purpose">Launching in 2025, Heavens Love is coming to the University of Pretoria! Prepare for a fellowship experience that brings you closer to Jesus and His unwavering love. We can’t wait to welcome you!</p>
+                    <!-- <p class="contact-info">For inquiries about joining cell groups or fellowships, please contact the provided details</p> -->
+                </div>
+            </div>
+        </section>
+
+
+    <!-- Placeholder for Scroll-to-Top Button -->
+    <div id="scroll-to-top-placeholder"></div>
+
+    <!-- Script to load the Scroll-to-Top Button -->
+    <script>
+        fetch('components/scroll-to-top.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('scroll-to-top-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script to load the footer -->
+    <script>
+        fetch('components/footer.html') // Adjust this path as needed
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <script src="scripts/global.js"></script>
+    <script src="scripts/campuses.js"></script>
+    <script src="scripts/navbar.js"></script>
+
+</body>
+
+</html>
