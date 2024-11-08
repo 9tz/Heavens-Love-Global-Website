@@ -1,83 +1,190 @@
-/* Navbar Styling */
-.navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  padding: 0.2rem 0.5rem;
-  transition: background-color 0.3s, box-shadow 0.3s, height 0.3s; /* Added height transition */
-  background-color: white;
-  align-content: center;
-  height: 14vh;
+ /* Base styles - Mobile-first (for screens below 576px) */
+ body {
+  background-color: red; /* Example background color for small screens */
 }
 
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* gap: 10px; */
-    
+/* Navbar Styling for Mobile */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 2.5rem;
+}
+
+.site-title {
+  display: none; /* Hide site title on mobile */
+}
+
+.nav-links,
+.social-icons {
+  display: none; /* Hide links and social icons on mobile */
+}
+
+/* Hamburger Icon for Mobile */
+.hamburger-menu {
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: black;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-menu ul li {
+  margin: 1rem 0;
+}
+
+.mobile-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.mobile-menu .social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+
+/* Show mobile menu when 'menu-visible' class is added */
+.menu-visible {
+  display: flex;
+  opacity: 1;
+}
+
+
+/* Media Query for Small Screens */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    background-color: blue;
   }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    height: 4rem;
-    transition: height 0.3s;
+}
+
+/* Medium screens (tablets and smaller laptops) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    background-color: violet;
   }
   
   .site-title {
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: rgb(0, 0, 0);
-    margin-left: 1rem;
+    display: inline; /* Show site title on tablets */
   }
-  
-  /* Navbar Links */
-  .nav-links ul { 
+
+  .hamburger-menu {
+    display: none; /* Hide hamburger menu */
+  }
+
+  .nav-links,
+  .social-icons {
+    display: flex; /* Show nav links and social icons */
+  }
+}
+
+/* Large screens (standard desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+    background-color: greenyellow;
+  }
+
+  .navbar {
+    height: 14vh;
+  }
+
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    height: 4rem;
+  }
+
+  .site-title {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    display: inline;
+  }
+
+  .nav-links ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    justify-content: flex-end; /* Right Align */
+    justify-content: flex-end;
   }
-  
+
   .nav-links ul li {
     margin-left: 20px;
   }
-  
-  .nav-links ul li a {
-    display: inline-block;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-weight: 600; /* Lighter text weight */
-    transition: ease-in-out 0.5s;/* Apply a smooth transition */
-    font-size: 0.7rem;
-    
-    
-  }
-  
-  .nav-links ul li a:hover {
 
+  .nav-links ul li a {
+    color: black;
+    text-decoration: none;
     font-weight: 600;
-    transition: ease-in-out 0.2s;
-    transform: scale(1.1); 
+    font-size: 0.9rem;
   }
-  
-  /* Social Icons */
-  .social-icons a {
-    color: rgb(0, 0, 0);
-    font-size: 0.7rem;
-    margin-left: 15px;
-    transition: color 0.3s;
+
+  .social-icons {
+    display: flex;
   }
-  
-  .social-icons a:hover {
-    color: rgb(255, 187, 0); /* Optional hover color for social icons */
+}
+
+/* Extra large screens (large desktops) */
+@media (min-width: 1200px) {
+  body {
+    background-color: rgb(0, 255, 225);
   }
-  
+}

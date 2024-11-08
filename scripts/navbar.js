@@ -20,3 +20,20 @@ window.addEventListener("scroll", function () {
         siteTitle.style.fontSize = "1.5rem"; // Larger title size at top
     }
 });
+
+// Selecting the hamburger menu icon and mobile menu
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+
+// Toggle mobile menu visibility when hamburger icon is clicked
+hamburgerMenu.addEventListener('click', () => {
+  mobileMenu.classList.toggle('menu-visible');
+});
+
+// Close the mobile menu when a link is clicked
+const mobileMenuLinks = document.querySelectorAll('#mobile-menu ul li a');
+mobileMenuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('menu-visible');
+  });
+});  
