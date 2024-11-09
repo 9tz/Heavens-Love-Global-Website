@@ -5,16 +5,16 @@ window.addEventListener("scroll", function () {
     const siteTitle = document.querySelector(".site-title");
 
     if (window.scrollY > 0) {
-        navbar.style.height = "10vh";
+        navbar.style.height = "";
         if (heroSection) {
-            heroSection.style.marginTop = "10vh";
+            navbar.style.height = "2rem";
         }
         logo.style.height = "3rem"; // Smaller logo when scrolled
         siteTitle.style.fontSize = "1rem"; // Smaller title size when scrolled
     } else {
-        navbar.style.height = "14vh";
+        navbar.style.height = "";
         if (heroSection) {
-            heroSection.style.marginTop = "14vh";
+            navbar.style.marginTop = "0rem";
         }
         logo.style.height = "4rem"; // Larger logo at top
         siteTitle.style.fontSize = "1.5rem"; // Larger title size at top

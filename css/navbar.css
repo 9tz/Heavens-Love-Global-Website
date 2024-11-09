@@ -1,6 +1,6 @@
  /* Base styles - Mobile-first (for screens below 576px) */
  body {
-  background-color: red; /* Example background color for small screens */
+  /* background-color: red;*/
 }
 
 /* Navbar Styling for Mobile */
@@ -9,23 +9,24 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 15vh;
-  padding: 0.5rem 1rem;
   background-color: white;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* background-color: aqua; */
+  padding: 2rem;
 }
 
 
 .navbar-container {
-  margin-left: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  /* background-color: rgb(255, 0, 0); */
+
 }
 
 .logo-container {
@@ -35,6 +36,7 @@
 
 .logo {
   display: flex;
+  height: 4rem;
 }
 
 .site-title{
@@ -65,7 +67,6 @@
 .hamburger-menu {
   display: block;
   cursor: pointer;
-  margin-right: 5rem;
 }
 
 .hamburger-menu span {
@@ -196,7 +197,16 @@ GENERAL FOR 992px+ px
     color: black;
     text-decoration: none;
     font-weight: 600;
-  
+    transition: ease-in-out 0.5s;
+  }
+
+  .nav-links ul li{
+    transition: ease-in-out 0.2s;
+  }
+
+  .nav-links ul li:hover {
+    transform: scale(1.08);
+    transition: ease-in-out 0.2s;
   }
 
 }
