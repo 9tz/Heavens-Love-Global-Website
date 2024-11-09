@@ -9,7 +9,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 10vh;
+  height: 15vh;
   padding: 0.5rem 1rem;
   background-color: white;
   z-index: 1000;
@@ -19,7 +19,9 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .navbar-container {
+  margin-left: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,22 +34,38 @@
 }
 
 .logo {
-  height: 2.5rem;
+  display: flex;
 }
 
-.site-title {
-  display: none; /* Hide site title on mobile */
+.site-title{
+  display: none;
 }
 
-.nav-links,
-.social-icons {
-  display: none; /* Hide links and social icons on mobile */
+.navbar-follow-us{
+  display: none;
+}
+
+.site-title1 {
+
+    display: inline;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    margin-left: 1rem;
+  
+
+  
+}
+
+.nav-links, .social-icons{
+  display: none;
 }
 
 /* Hamburger Icon for Mobile */
 .hamburger-menu {
   display: block;
   cursor: pointer;
+  margin-right: 5rem;
 }
 
 .hamburger-menu span {
@@ -105,81 +123,124 @@
   opacity: 1;
 }
 
+/*GENERAL ATTRIBUTES FOR ALL SCREENS ABOVE A SIZE*/
 
-/* Media Query for Small Screens */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  body {
-    background-color: blue;
-  }
-}
+/*
 
-/* Medium screens (tablets and smaller laptops) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  body {
-    background-color: violet;
-  }
+GENERAL FOR 576+ px
+
+*/
+@media (min-width: 576px){
+
+
   
-  .site-title {
-    display: inline; /* Show site title on tablets */
-  }
-
-  .hamburger-menu {
-    display: none; /* Hide hamburger menu */
-  }
-
-  .nav-links,
-  .social-icons {
-    display: flex; /* Show nav links and social icons */
-  }
+  
 }
 
-/* Large screens (standard desktops) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  body {
-    background-color: greenyellow;
+/*
+
+GENERAL FOR 768px+ px
+
+*/
+
+@media (min-width: 768px){
+  .navbar{
+  height: 10vh;
   }
 
-  .navbar {
-    height: 14vh;
+  .site-title1{
+    display: none;
   }
 
-  .navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.site-title{
+  
+  display: inline;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: rgb(0, 0, 0);
+  margin-left: 1rem;
+}
+
+}
+
+/*
+
+GENERAL FOR 992px+ px
+
+*/
+
+@media (min-width: 992px) {
+
+  .hamburger-menu span {
+    display: none;
+ 
   }
 
-  .logo {
-    height: 4rem;
+  .nav-links{
+    display: block;
+    transition: 1s;
   }
 
-  .site-title {
-    font-size: 1.2rem;
-    margin-left: 1rem;
-    display: inline;
+  .nav-links{
+    display: block;
+    transition: 1s;
   }
 
   .nav-links ul {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
     justify-content: flex-end;
-  }
-
-  .nav-links ul li {
-    margin-left: 20px;
   }
 
   .nav-links ul li a {
     color: black;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+  
   }
 
-  .social-icons {
-    display: flex;
-  }
+}
+
+/* Media Query for Small Screens */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+ 
+}
+
+/* Large screens (standard desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+.navbar-follow-us{
+  display: inline;
+  margin-left: 1rem;
+  /* margin-right: 1rem; */
+  font-size: 0.7rem;
+  font-weight: 900;
+  background-color: rgb(0, 0, 0);
+  padding: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 4px;
+  color: white;
+  transition: ease-in-out 0.5s;
+
+}
+.navbar-follow-us:hover{
+transition: 1s;
+transform: scale(1.07);
+cursor: pointer;
+}
+
+.nav-links ul li {
+  margin-left: 7px;
+}
+
+.nav-links{
+  font-size: 0.7rem;
+}
+  
+
+
 }
 
 /* Extra large screens (large desktops) */
@@ -187,4 +248,28 @@
   body {
     background-color: rgb(0, 255, 225);
   }
+
+  .nav-links{
+    font-size: 0.9rem;
+  }
+    /* Social Icons - ONLY DISPLAYED AT LARGE SCREENS */
+  .social-icons{
+    display: block;
+  }
+
+  .nav-links ul li {
+    margin-left: 20px;
+  }
+  
+    .social-icons a {
+      color: rgb(0, 0, 0);
+      font-size: 0.7rem;
+      margin-left: 15px;
+      transition: color 0.3s;
+    }
+    
+    .social-icons a:hover {
+      color: rgb(255, 187, 0); /* Optional hover color for social icons */
+    }
+    
 }
