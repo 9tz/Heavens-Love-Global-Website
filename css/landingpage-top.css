@@ -1,0 +1,498 @@
+ /* Base styles - Mobile-first (for screens below 576px) */
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: white;
+}
+
+.hero-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero Top with scroll-based animation */
+.hero-top {
+  height: 80%; /* Adjusted to take up 70% of the hero section */
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  /* Initial settings to fade in from white and slide down */
+  background-color: white;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: transform 1s ease, opacity 1s ease, background-color 1s ease; /* Smooth slide, fade, and color change */
+margin-top: 10vh;
+}
+
+
+
+/* Hero Top when page loads (fade in and slide down) */
+.hero-top.slide-in {
+  background-color: transparent; /* Fade from white */
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Slide to original position */
+}
+
+/* Scroll effect: Fade to white and slide up */
+.hero-top.fade-out {
+  background-color: white; /* Background fades into white */
+  opacity: 0; /* Fade out */
+  transform: translateY(-100px); /* Slide up */
+  transition: transform 1s ease, opacity 1s ease, background-color 1s ease;
+}
+
+/* Hero Bottom */
+.hero-bottom {
+  height: 20%; /* Adjust based on design */
+  background-color: #000000;
+  padding: 40px 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  align-content: end;
+}
+
+/* CTA Section Styling */
+.cta-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  width: 100%;
+}
+
+/* CTA Item Styling */
+.cta-item {
+  text-align: center;
+  padding: 10px 0px;
+  margin: 0 10px;
+}
+
+/* CTA Text Styling */
+.cta-item p {
+  font-size: 0.6rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+
+.cta-item span {
+  font-size: 0.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* CTA Button Styling */
+.cta-button {
+  padding: 5px 10px;
+  font-size: 0.7rem;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+
+}
+
+.cta-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: scale(1.05);
+}
+
+/*SENIOR PASTOR SECTION*/
+
+.senior-pastor-section {
+  position: relative;
+  height: 75vh;
+  background: url('../assets/seniorpastor-bg-small.png');
+  transition: background-size 1.5s ease, background-position 1.5s ease;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  /* justify-content: start; */
+  /* background-color: blue; */
+
+} 
+
+  
+  .text-content {
+    color: rgb(0, 0, 0);
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    transform: scale(0.7);
+    /* background-color: #ffcc00; */
+  }
+  
+  .text-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffeb3b;
+
+
+  }
+  
+  .text-content h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+   
+    
+  }
+  
+  .text-content h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+  }
+  
+  .text-content h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+
+  }
+  
+  .text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+   
+    margin-bottom: 5px;
+    font-weight: 800;
+  }
+  
+  .follow-platforms {
+   
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease;
+  }
+  
+  .follow-platforms p {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  
+  .follow-platforms .senior-pastor-social-icons a {
+    font-size: 1.5rem;
+    margin-right: 20px;
+    color: white;
+    transition: color 0.3s ease;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.548);
+
+  }
+  
+  .follow-platforms .senior-pastor-social-icons a:hover {
+    color: #ffd600;
+    transform: scale(1.1);
+    transition: ease-in-out;
+  }
+  
+  /* Hover Animation for Follow Platforms */
+  .senior-pastor-section:hover .follow-platforms {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+  }
+  
+  .senior-pastor-section:hover .follow-platforms {
+    animation: hidePlatforms 2s ease 2s forwards;
+  }
+
+  .senior-pastor-section.fade-in {
+    background-size: 100%; /* Zooms in and settles when user scrolls into view */
+    background-position: center;
+
+  }
+  
+  .senior-pastor-section.fade-out {
+    background-size: 110%; /* Zooms out when the user scrolls out */
+    background-position: top; /* Moves background upward */
+   
+  }
+  
+  .senior-pastor-section .text-content h1,
+  .senior-pastor-section .text-content h2,
+  .senior-pastor-section .text-content h3,
+  .senior-pastor-section .text-content h4,
+  .senior-pastor-section .text-content p {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.548);
+  }
+
+/* What's On Section Content */
+.whats-on-section {
+position: relative;
+height: 100%;
+background-color: #071b44;
+overflow: hidden;
+
+}
+
+.whats-on-video-small {
+  display: block;
+  width: 100%; /* Adjust as needed */
+}
+.whats-on-video-big {
+  display: none;
+}
+
+.whats-on-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+  
+ /* Next Steps Section */
+ .next-steps-section {
+  height: 50vh;
+  background-color: rgb(175, 175, 175);
+  background-image: url('../assets/next-steps-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  position: relative;
+  display: block;
+  /* justify-content: center;*/
+  /* align-items: center; */
+  text-align: center; 
+  color: white;
+  transition: ease-in-out 1.5s;
+  padding: 2.5rem;
+}
+.next-steps-section:hover{
+  /* transform: scale(1.01);
+  transition: ease-in-out 1.5s */
+}
+
+.next-steps-content {
+  z-index: 1;
+  /* padding: 20px; */
+  /* width: 100%; */
+  /* background-color: #4b0082; */
+}
+
+.next-steps-content h2 {
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin-bottom: 0.1rem;
+  color: #fff;
+}
+
+.next-steps-content p {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.next-steps-buttons {
+  display: block;
+  justify-self: center;
+/* background-color: #ffcc00; */
+width: 80%;
+}
+
+.next-step-link {
+  text-decoration: none;
+  color: white;
+}
+
+.next-step-card {
+  display: flex;
+  align-items: center;
+  display: inline-block; /* Behaves like inline element but respects width and padding */
+  white-space: nowrap; /* Ensure text stays on one line */
+  background-color: rgb(255, 255, 255);
+  padding: 5px 30px;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 30px;
+
+  font-size: 0.8rem;
+  transition: background-color 0.3s, transform 0.3s;
+  color: #000;
+}
+
+.next-step-card:hover {
+  background-color: rgb(0, 0, 0);
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+.next-step-card span {
+  font-weight: bold;
+  text-align: center;
+}
+
+.next-step-card i {
+  font-size: 1.5rem;
+  color: #ffcc00; /* Yellow color for the arrow */
+}
+
+
+/*Animations*/
+/* Initial state for animation */
+.whats-on-content, .publishing-section {
+    opacity: 1;
+    /* transform: translateX(50px); Initially offset slightly */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+}
+
+.whats-on-content.animate-in, .publishing-section.animate-in {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+}
+
+
+/*GENERAL ATTRIBUTES FOR ALL SCREENS ABOVE A SIZE*/
+
+/*
+
+GENERAL FOR 576+ px
+
+*/
+@media (min-width: 576px){
+
+
+  
+  
+}
+
+/*
+
+GENERAL FOR 768 px
+
+*/
+
+
+
+@media (min-width: 768px){
+ 
+  .cta-section {
+    width: 60%;
+  }
+
+  .cta-item p {
+    font-size: 0.7rem;
+  }
+
+  .senior-pastor-section {
+
+    background: url('../assets/seniorpastor-bg.png');
+    background-repeat: no-repeat;
+
+  }
+
+
+
+  .text-content {
+    justify-content: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    max-width: 60%;
+    transform: scale(1.1);
+  }
+
+  .whats-on-video-small {
+    display: none;
+}
+.whats-on-video-big {
+    display: block;
+    width: 100%; /* Adjust as needed */
+}
+}
+    
+
+/*
+
+GENERAL FOR 992px+ px
+
+*/
+
+@media (min-width: 992px) {
+.senior-pastor-section{
+  height: 100vh;
+
+}
+}
+
+/* Media Query for Small Screens */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+ 
+}
+
+/* Media Query for Small Screens */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .text-content {
+    padding: 2,5rem;
+  transform: scale(0.8);
+  }
+
+  .senior-pastor-section{
+    background-size: contain;
+    /* padding-top: 2px; */
+  }
+
+ 
+}
+
+/* Large screens (standard desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .senior-pastor-section {
+    padding-top: 8rem;
+    background-size: cover;
+    background-image: url('../assets/seniorpastor-bg-992.png');
+  
+  }
+
+  .text-content {
+    color: rgb(0, 0, 0);
+    transform: scale(1);
+    margin-left: 5rem;
+    margin-top: 5rem;
+  }
+
+}
+
+/* Extra large screens (large desktops) */
+@media (min-width: 1200px) {
+  .senior-pastor-section {
+    height: 100vh;
+  }
+
+  .text-content {
+    color: rgb(0, 0, 0);
+    max-width: 35rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transform: scale(1.1);
+    margin-left: 5rem;
+    margin-top: 9rem;
+    /* background-color: #ffcc00; */
+  }
+  
+
+}
+

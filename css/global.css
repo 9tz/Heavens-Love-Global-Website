@@ -56,8 +56,15 @@ a {
 
 html {
   scroll-behavior: smooth;
-  background-color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif; /* Set consistent font across site */
+/* background-color: red; */
 }
 
-body{}
+
+body{
+  /* justify-self: center; */
+  /* background-color: #23ff0f; */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}

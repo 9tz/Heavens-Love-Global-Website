@@ -1,4 +1,6 @@
-/* Hero Section */
+ /* Base styles - Mobile-first (for screens below 576px) */
+
+ /* Hero Section */
 .html{
     background-color: black;
 }
@@ -120,6 +122,8 @@ Section Styling */
 .section-baptism {
     background-image: url('../assets/gettingstarted-baptism-bg.png');
     color: #000000;
+    background-size: cover;
+    background-position: 85%;
 }
 
 .section-cell {
@@ -248,3 +252,62 @@ Section Styling */
     color: #555;
     transition: color 0.3s ease;
 }
+
+
+/*GENERAL ATTRIBUTES FOR ALL SCREENS ABOVE A SIZE*/
+
+/*
+
+GENERAL FOR 576+ px
+
+*/
+@media (min-width: 576px){
+
+    .section-baptism {
+        background-position: 100%;
+    }
+    
+  
+  
+}
+
+/*
+
+GENERAL FOR 768px+ px
+
+*/
+
+@media (min-width: 768px){
+
+
+}
+
+/*
+
+GENERAL FOR 992px+ px
+
+*/
+
+@media (min-width: 992px) {
+
+
+}
+
+/* Media Query for Small Screens */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+ 
+}
+
+/* Large screens (standard desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+
+}
+
+/* Extra large screens (large desktops) */
+@media (min-width: 1200px) {
+
+    
+}
+

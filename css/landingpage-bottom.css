@@ -1,0 +1,409 @@
+ /* Base styles - Mobile-first (for screens below 576px) */
+
+
+/* Set the height of the swiper container */
+.swiper-container {
+  width: 100%;
+  /* margin: 15px auto; */
+  background: #252827;
+  padding: 10px;
+}
+
+/* Ensure slides are displayed correctly */
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+
+  /* Center slide content vertically */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+
+
+  
+}
+
+/* Style the images */
+.swiper-slide img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+margin: 0;
+}
+
+/* Hide scrollbar */
+.swiper-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Publishing Section */
+.publishing-section {
+  background-image: url('../assets/alethiabanner.png');
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: contain;
+height: 75vh;
+transition: ease-in-out 1.5s;
+
+ 
+}
+
+.publishing-section:hover{
+  /* transform: scale(1.02);
+  transition: ease-in-out 1.5s; */
+}
+
+.publishing-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure it's above the image */
+}
+
+/* Pub Button Styling */
+.pub-button {
+  padding: 8px 24px; /* Decrease padding for a smaller button */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  background-color: white;
+  border: 1.5px solid white;
+  color: #000000;
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: all 0.3s ease; /* Add transition for hover effect */
+  position: relative;
+  top: 85%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(105%, 330%); /* Centers the button based on its own size */
+  white-space: nowrap;
+}
+
+.pub-button:hover {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  transform: scale(1.05); /* Very slight increase in size on hover */
+  transform: translate(110%, 330%); /* Centers the button based on its own size */
+  top: 85%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */ }
+
+
+
+/*Animations*/
+/* Initial state for animation */
+.whats-on-content, .publishing-section {
+    opacity: 1;
+    /* transform: translateX(50px); Initially offset slightly */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+}
+
+.whats-on-content.animate-in, .publishing-section.animate-in {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+}
+
+
+
+/* YouTube Section */
+.youtube-section {
+  position: relative;
+  height: 65vh;
+  display: flex;
+  background-color: #252827;
+  background-image: url('../assets/youtube-bg-noise-small.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* Ensure this layer is behind other content */
+  transition: ease-in-out 1.5s;
+  justify-content: center;
+}
+.youtube-section:hover{
+  transition: ease-in-out 1.5s;
+  /* transform: scale(1.01); */
+}
+.sub{
+  display: flex;
+  position: relative;
+  height: 30vh;
+  width: 100%;
+
+  /* background-image: url(/assets/youtube-thumbnails.png); */
+  background-color: red;
+  background-size: cover;
+  transition: ease-in-out 1s;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.sub a {
+  /* display: block; */
+  width: auto;
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.sub img {
+  width: 95%;
+  height: auto;
+
+margin-bottom: 5px;
+margin-top: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+  /* padding: 8px;; */
+}
+
+.sub a:hover img {
+  transform: scale(1.01);
+}
+
+
+.youtube-text {
+  /* color: white; */
+  z-index: 2;
+  padding: 20px;
+  text-align: center ;
+  font-size: 1.5rem;
+  /* background-color: aqua; */
+
+ 
+}
+.youtube-text a{
+  font-weight: 800;
+}
+
+.youtube-text h2{
+  font-weight: 900;
+}
+
+.youtube-text a:hover{
+ transform: scale(1.1);
+}
+
+
+
+
+/*Campuses Section*/
+
+.campuses-section {
+  height: 75vh;
+  background-image: url('../assets/campuses-bg.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  transition: ease-in-out 1.5s
+}
+
+.campuses-section:hover{
+  /* transform: scale(1.01); */
+  transition: ease-in-out 1.5s
+}
+
+.campuses-content h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.campuses-content p {
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.campuses-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.campuses-link {
+  text-decoration: none;
+  color: white;
+}
+
+.campuses-card {
+  display: flex;
+  align-items: center;
+  display: inline-block; /* Behaves like inline element but respects width and padding */
+  white-space: nowrap; /* Ensure text stays on one line */
+  /* justify-content: space-between; */
+  background-color: rgb(255, 255, 255);
+  padding: 5px 30px;
+  border-radius: 30px;
+  /* width: 300px; */
+  font-size: 0.8rem;
+  transition: background-color 0.3s, transform 0.3s;
+  color: #000;
+}
+
+.campuses-card:hover {
+  background-color: rgb(0, 0, 0);
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+.campuses-card span {
+  font-weight: bold;
+  text-align: center;
+}
+
+.campuses-card i {
+  font-size: 1.5rem;
+  color: #ffcc00; /* Yellow color for the arrow */
+}
+  
+  /* Giving Section */
+  .giving-section {
+    height: 75vh;
+    background-image: url('../assets/giving-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+   
+    justify-content: center;
+    position: relative;
+    transition: ease-in-out 1.5s;
+  }
+  .giving-section:hover{
+    transition: ease-in-out 1.5s;
+    /* transform: scale(1.01); */
+  }
+
+  
+  .giving-content {
+    /* z-index: 1; */
+    /* display: flex; */
+    width: 80%;
+    color: white;
+    text-align: left;
+  }
+  
+
+  /* Bold and thick 'GIVING' */
+  .giving-eft h2 {
+    font-size: 3.8rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    font-style: italic;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.548);
+    line-height: 1;
+margin-top: 2rem;
+  }
+  
+  /* Adjusted the font sizes */
+  .giving-eft h3, .giving-credit h3 {
+    font-size: 1.6rem; /* Reduced font size */
+    font-weight: bold;
+    margin-bottom: 0.8rem; /* Smaller margin */
+  }
+  
+  .giving-eft p, .giving-credit p {
+    font-size: 2rem; /* Reduced the font size further */
+    line-height: 1.5;
+    margin-top: 4rem; /* Added margin below paragraphs */
+  font-weight: 600;
+  font-style: italic;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.548);
+
+  }
+  
+  /* Adjusted button size and added hover animation */
+  .give-now-btn {
+    background-color: #ffffff;
+    color: black;
+    padding: 8px 20px; /* Made button smaller */
+    font-size: 1rem; /* Reduced font size */
+    border-radius: 0.6rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Added transform for animation */
+    position: relative;
+    margin-top: 2rem;
+    margin-right: 2rem;
+  }
+  
+  .give-now-btn:hover {
+    background-color: black;
+    color: #ffffff;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+  }
+
+  .card-logo {
+    display: block;
+    margin-top: 10px; /* Space above the logo */
+    max-width: 4rem; /* Adjust size as needed */
+    margin-left: 0.2rem;
+    height: auto;
+}
+/*GENERAL ATTRIBUTES FOR ALL SCREENS ABOVE A SIZE*/
+
+/*
+
+GENERAL FOR 576+ px
+
+*/
+@media (min-width: 576px){
+
+
+  
+  
+}
+
+/*
+
+GENERAL FOR 768px+ px
+
+*/
+
+@media (min-width: 768px){
+
+}
+
+/*
+
+GENERAL FOR 992px+ px
+
+*/
+
+@media (min-width: 992px) {
+  .youtube-section{
+  
+    justify-content: left;
+
+
+}
+}
+
+/* Media Query for Small Screens */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+ 
+}
+
+/* Large screens (standard desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .youtube-section{
+  background-image: url('../assets/youtube-bg-noise-992px.png');
+  }
+}
+
+/* Extra large screens (large desktops) */
+@media (min-width: 1200px) {
+  .youtube-section{
+    background-image: url('../assets/youtube-bg-noise.png');
+    }
+}
+

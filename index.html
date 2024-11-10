@@ -2,20 +2,30 @@
        
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Heavens Love Global</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/landingpage.css">
+    <link rel="stylesheet" href="/css/landingpage-top.css">
+    <link rel="stylesheet" href="/css/landingpage-bottom.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/navbar.css">
+    <!-- Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
 </head>
 
 <body>
+
     <!-- Placeholder for Navbar -->
     <div id="navbar-placeholder"></div>
 
@@ -60,10 +70,6 @@
 
 
 <section class="senior-pastor-section">
-    <video autoplay muted loop class="background-video">
-        <source src="../assets/seniorpastor-bg.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
     <div class="senior-pastor-bg">
     
         <div class="text-content">
@@ -86,13 +92,28 @@
     </div>
 </section>
 
+    <!-- What's On Section -->
+       <section id="whats-on" class="whats-on-section">
+            <div class="whats-on-content">
+                <video class="whats-on-video-small" autoplay muted loop playsinline>
+                    <source src="/assets/whats-on-small.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video class="whats-on-video-big" autoplay muted loop playsinline>
+                    <source src="/assets/whats-on.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                
+                
+            </div>
+        </section>
+
 
 
     <section id="next-steps" class="next-steps-section">
-        <div class="overlay"></div>
         <div class="next-steps-content">
             <h2>Next Steps</h2>
-            <p>Explore how you can progress further in Christ and <br> get involved at Heavens Love Global</p>
+            <p>Explore how you can progress further in Christ and get involved at Heavens Love Global</p>
             <div class="next-steps-buttons">
                 <a href="gettingstarted.html#baptism" class="next-step-link">
                     <div class="next-step-card">
@@ -148,7 +169,9 @@
     <section class="publishing-section">
        
         <div class="publishing-text">
-<a href="publishing.html"><button class="pub-button">Go To Store  <i class="fa-solid fa-arrow-right"></i></i></button></a>
+<a href="publishing.html">
+    <!-- <button class="pub-button">Go To Store  <i class="fa-solid fa-arrow-right"></i></i></button> -->
+</a>
         </div>
     </section>
 
@@ -160,38 +183,78 @@
     <div class="youtube-text">
         <h2>WATCH SERMONS</h2>
         <p>Watch our latest sermons </br> on our official Facebook page</p>
-        <!-- <img src="assets/youtube-logo.png" alt="YouTube Logo" class="youtube-logo"> -->
         <a href="https://www.facebook.com/heavenslove.global"><i class="fab fa-facebook-f"> </i>  Pastor Yiannis Markus</a> 
 
     </div>
-    <!-- <div class="youtube-overlay">
-        
-    </div> -->
 </section>
 
-    <section class="sub">
-        <a href="https://www.facebook.com/100079625864458/videos/850796123881437" target="_blank">
-            <img src="/assets/youtube-vid1.png" alt="Video 1">
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <a
+          href="https://www.facebook.com/100079625864458/videos/850796123881437"
+          target="_blank"
+        >
+          <img src="/assets/youtube-vid1.png" alt="Video 1" />
         </a>
-        <a href="https://www.facebook.com/100079625864458/videos/1047747540006047" target="_blank">
-            <img src="/assets/youtube-vid2.png" alt="Video 2">
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <a
+          href="https://www.facebook.com/100079625864458/videos/1047747540006047"
+          target="_blank"
+        >
+          <img src="/assets/youtube-vid2.png" alt="Video 2" />
         </a>
-        <a href="https://www.facebook.com/100079625864458/videos/848726214096569" target="_blank">
-            <img src="/assets/youtube-vid3.png" alt="Video 3">
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <a
+          href="https://www.facebook.com/100079625864458/videos/848726214096569"
+          target="_blank"
+        >
+          <img src="/assets/youtube-vid3.png" alt="Video 3" />
         </a>
-        <a href="https://www.facebook.com/link-to-video4" target="_blank">
-            <img src="/assets/youtube-vid4.png" alt="Video 4"> <!--Cant find how to get rev!!-->
+      </div>
+      <!-- Slide 4 -->
+      <div class="swiper-slide">
+        <a
+          href="https://www.facebook.com/link-to-video4"
+          target="_blank"
+        >
+          <img src="/assets/youtube-vid4.png" alt="Video 4" />
         </a>
-        <a href="https://www.facebook.com/100079625864458/videos/1244821056714963" target="_blank">
-            <img src="/assets/youtube-vid5.png" alt="Video 5">
+      </div>
+      <!-- Slide 5 -->
+      <div class="swiper-slide">
+        <a
+          href="https://www.facebook.com/100079625864458/videos/1244821056714963"
+          target="_blank"
+        >
+          <img src="/assets/youtube-vid5.png" alt="Video 5" />
         </a>
-        <a href="https://www.facebook.com/100079625864458/videos/3833918910269825" target="_blank">
-            <img src="/assets/youtube-vid6.png" alt="Video 6">
+      </div>
+      <!-- Slide 6 -->
+      <div class="swiper-slide">
+        <a
+          href="https://www.facebook.com/100079625864458/videos/3833918910269825"
+          target="_blank"
+        >
+          <img src="/assets/youtube-vid6.png" alt="Video 6" />
         </a>
-    </section>
-    
+      </div>
+    </div>
+    <!-- Add Arrows -->
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+    <!-- Add Pagination (Optional) -->
+    <!-- <div class="swiper-pagination"></div> -->
+  </div>
+  
 
-</section>
+
 
 <section id="campuses" class="campuses-section">
 
@@ -216,17 +279,17 @@
            
                 </div>
             </a>
-            <a href="campuses.html#wits-campus" class="campuses-link">
+            <!-- <a href="campuses.html#wits-campus" class="campuses-link">
                 <div class="campuses-card">
                     <span>Wits</span>
            
                 </div>
-            </a>
-            <a href="campuses.html#botswana-campus" class="campuses-link">
+            </a> -->
+            <!-- <a href="campuses.html#botswana-campus" class="campuses-link">
                 <div class="campuses-card">
                     <span>University Of Botswana</span>
                 </div>
-            </a>
+            </a> -->
 
         
 
@@ -256,11 +319,11 @@
      
             
             <!-- PayPal Donation Form -->
-            <form action="https://www.paypal.com/donate" method="post" target="_top" class="paypal-donate-form">
+            <!-- <form action="https://www.paypal.com/donate" method="post" target="_top" class="paypal-donate-form">
                 <input type="hidden" name="hosted_button_id" value="9RQBLC7ZFDENJ" />
                 <button type="submit" class="give-now-btn">Give Now</button>
                 <img src="assets/cards-visa-master.png" alt="Visa and MasterCard" class="card-logo">
-            </form>
+            </form> -->
                         
         </div>
             </div>
@@ -313,5 +376,44 @@
             document.getElementById('footer-placeholder').innerHTML = data;
         });
 </script>
+
+<!-- Swiper's JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      loop: true, // Enable looping
+      slidesPerView: 7, // Number of slides to show
+      spaceBetween: 0, // Space between slides in pixels
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // Responsive breakpoints
+      breakpoints: {
+        // When window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        // When window width is >= 480px
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        // When window width is >= 768px
+        768: {
+          slidesPerView: 5,
+          spaceBetween: 0,
+        },
+      },
+    });
+  </script>
+  
+
     </body>
     </html>
