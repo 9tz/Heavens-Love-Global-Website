@@ -57,14 +57,29 @@ a {
 html {
   scroll-behavior: smooth;
   font-family: 'Montserrat', sans-serif; /* Set consistent font across site */
-/* background-color: red; */
 }
 
 
 body{
   /* justify-self: center; */
   /* background-color: #23ff0f; */
-  width: 100%;
+
   margin: 0;
   padding: 0;
+
+}
+
+@media (min-width: 1200px) {
+  html {
+    background-color: rgb(241, 241, 241);
+  }
+  
+  body{
+    /* justify-self: center; */
+    /* background-color: #23ff0f; */
+    width: 100%;
+    justify-self: center;
+
+    background-color: white;
+  }
 }

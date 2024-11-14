@@ -65,13 +65,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const heroTop = document.querySelector('.hero-top');
-    const imagePaths = [
-        '../assets/hero.png',
-        '../assets/hero2.png',
-        '../assets/hero3.png',
-        // '../assets/hero4.png'
-    ]; // List of images for the slideshow
+    // Define the base names of the hero images
+    const imageBases = ['hero1'];
     let currentImageIndex = 0;
+
+    // Function to determine the appropriate image suffix based on screen width
+    function getImageSuffixForWidth(width) {
+        if (width < 576) {
+            return '-360px';
+        } else if (width < 768) {
+            return '-576px';
+        } else if (width < 992) {
+            return '-768px';
+        } else if (width < 1200) {
+            return '-992px';
+        } else {
+            return '-1200px';
+        }
+    }
 
     // Function to update the background image with a fade effect
     function updateBackgroundImage() {
@@ -79,17 +90,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // After the fade-out transition, change the background image
         setTimeout(() => {
-            currentImageIndex = (currentImageIndex + 1) % imagePaths.length; // Cycle through the images
-            heroTop.style.backgroundImage = `url('${imagePaths[currentImageIndex]}')`;
+            const screenWidth = window.innerWidth;
+            const imageSuffix = getImageSuffixForWidth(screenWidth);
+            currentImageIndex = (currentImageIndex + 1) % imageBases.length; // Cycle through the images
+            
+            // Construct the new image path based on the base name and breakpoint suffix
+            const newImagePath = `../assets/${imageBases[currentImageIndex]}${imageSuffix}.png`;
+            heroTop.style.backgroundImage = `url('${newImagePath}')`;
             heroTop.style.opacity = 1; // Fade in the new image
         }, 400); // Match this to CSS transition duration
     }
 
     // Initial display setup for the first image
-    heroTop.style.backgroundImage = `url('${imagePaths[currentImageIndex]}')`;
-    heroTop.style.opacity = 1; // Initial fade-in
+    function setInitialImage() {
+        const screenWidth = window.innerWidth;
+        const imageSuffix = getImageSuffixForWidth(screenWidth);
+        const initialImagePath = `../assets/${imageBases[currentImageIndex]}${imageSuffix}.png`;
+        heroTop.style.backgroundImage = `url('${initialImagePath}')`;
+        heroTop.style.opacity = 1; // Initial fade-in
+    }
 
-    // Set interval to update the image every 5 seconds (5000ms)
-    setInterval(updateBackgroundImage, 5000);
+    // Call initial image setup
+    setInitialImage();
+
+    // Create a variable for the slideshow interval
+    let slideshowInterval = setInterval(updateBackgroundImage, 5000);
+
+    // Update the background image on window resize to load appropriate image for new viewport width
+    window.addEventListener('resize', () => {
+        // Clear the existing interval
+        clearInterval(slideshowInterval);
+
+        // Update the image to adjust to the new size immediately
+        setInitialImage();
+
+        // Restart the slideshow interval
+        slideshowInterval = setInterval(updateBackgroundImage, 5000);
+    });
 });
-

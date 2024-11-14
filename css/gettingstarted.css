@@ -1,3 +1,17 @@
+@media (max-width: 360px) {
+    .section{
+          transform: scale(0.8);
+      }
+      .overlay {
+        justify-self: center;
+        position: absolute;
+        width: 55vh;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+   }
+ 
  /* Base styles - Mobile-first (for screens below 576px) */
 
  /* Hero Section */
@@ -5,28 +19,42 @@
     background-color: black;
 }
 .hero {
-    height: 55vh;
-    background-image: url('../assets/gettingstarted-hero-bg.png');
+    min-height: 60vh;
+    background-image: url('../assets/gettingstarted-hero-bg-430px.png');
     background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    background-color: red;
-    padding-top: 70px;
-    padding: 50px
+    margin-top: 10vh;
+ 
 
+}
+
+.hero-content{
+    width: 60%;
+    /* background-color: red; */
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 900;
+    line-height: 0.9;
+    
+
+}
+
+.hero-content h1, .hero-content p {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+    margin: unset;
+    padding:1rem;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
-    margin-top: 10px;
+    font-size: 1rem;
+    /* margin-top: 2px; */
     font-style: italic;
 }
 
@@ -58,10 +86,13 @@
 /* 
 Section Styling */
 /* General Section Styling */
+
+
+
 .section {
     background-size: cover;
-    padding: 150px 45px;    
-    height: 100vh;
+    /* padding: 150px 45px;     */
+   min-height: 100vh;
     display: flex;
     align-items: center;
     text-align: center; /* Right-aligns text within the content */
@@ -83,6 +114,12 @@ Section Styling */
     font-size: 1rem;
     margin-bottom: 20px;
     color: white;
+   
+}
+
+.section p, .section h2{
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+
 }
 
 .section-card {
@@ -118,7 +155,6 @@ Section Styling */
     background-image: url('../assets/gettingstarted-salvation-bg.png');
     color: #ffffff;
 }
-
 .section-baptism {
     background-image: url('../assets/gettingstarted-baptism-bg.png');
     color: #000000;
@@ -256,6 +292,27 @@ Section Styling */
 
 /*GENERAL ATTRIBUTES FOR ALL SCREENS ABOVE A SIZE*/
 
+@media (min-width: 300px) and (max-width: 576px) {
+    .section-salvation{
+        background-image: url('../assets/gettingstarted-salvation-bg-300px.png');
+
+    }
+    .section-cell{
+        background-image: url('../assets/gettingstarted-cell-bg-300px.png');
+
+    }
+    .section-baptism {
+        background-image: url('../assets/gettingstarted-baptism-bg-300px.png');
+
+    }
+    .section-serving{
+        background-image: url('../assets/gettingstarted-serving-bg-300px.png');
+
+    }
+
+}
+
+
 /*
 
 GENERAL FOR 576+ px
@@ -266,7 +323,7 @@ GENERAL FOR 576+ px
     .section-baptism {
         background-position: 100%;
     }
-    
+
   
   
 }
@@ -278,7 +335,10 @@ GENERAL FOR 768px+ px
 */
 
 @media (min-width: 768px){
-
+    .hero-content h1 {
+        font-size: 4rem;
+    
+    }
 
 }
 
@@ -289,25 +349,63 @@ GENERAL FOR 992px+ px
 */
 
 @media (min-width: 992px) {
+    .hero {
+ 
+        /* background-image: url('../assets/gettingstarted-hero-bg-992px.png'); */
+    }
 
-
+    .hero-content h1, .hero-content p{
+        /* display: none; */
+    }
 }
 
 /* Media Query for Small Screens */
 @media (min-width: 576px) and (max-width: 767.98px) {
 
+    .section-salvation{
+        background-image: url('../assets/gettingstarted-salvation-bg-300px.png');
+
+    }
+
+    .section-salvation{
+        background-image: url('../assets/gettingstarted-salvation-bg-300px.png');
+    
+    }
  
 }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .section-salvation{
+        background-image: url('../assets/gettingstarted-salvation-bg-300px.png');
+    
+    }
+}
+
 
 /* Large screens (standard desktops) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
+    .hero {
+        min-height: 60vh;
+        background-image: url('../assets/gettingstarted-hero-bg-992px.png');
+
+}
+
+.section-salvation{
+    background-image: url('../assets/gettingstarted-salvation-bg-300px.png');
+
+}
 
 }
 
 /* Extra large screens (large desktops) */
 @media (min-width: 1200px) {
+    .hero {
+        min-height: 60vh;
+        background-image: url('../assets/gettingstarted-hero-bg-992px.png');
 
+}
     
 }
 

@@ -1,3 +1,11 @@
+ /* @media (max-width: 480px) { */
+/* Section Styling */
+
+/* Base styles - Mobile-first (for screens below 576px) */
+
+
+/*GENERAL ATTRIBUTES FOR ALL SCREENS ABOVE A SIZE*/
+
 /* Hero Section */
 .html {
     background-color: black;
@@ -5,28 +13,38 @@
 
 .hero {
     height: 55vh;
-    background-image: url('../assets/about-hero-bg.png'); /* Adjusted for About page */
+    background-image: url('../assets/about-hero-bg-430px.png'); /* Adjusted for About page */
+    background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
-    padding-top: 70px;
-    padding: 50px;
+
 }
+
+.hero-content{
+    padding-top: 3rem;
+    font-style: oblique;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+
+}
+
 
 .hero-content h1 {
-    font-size: 4rem;
+    margin:unset;
+    font-size: 3rem;
     font-weight: 900;
+    font-style: oblique;
+    color: white;
 }
 
-.hero-content p {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    font-style: italic;
+.hero-content h2 {
+    margin:unset;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffbf00;
 }
-
 /* Sticky Menu Bar */
 .menu-bar {
     display: flex;
@@ -56,11 +74,12 @@ height: 10vh;
 /* Section Styling */
 .section {
     background-size: cover;
-    padding: 150px 45px;
-    height: 100vh;
+    padding: 20px 30px;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     text-align: center;
+    /* background-color: #FFA500; */
 }
 
 .section h2, .section p {
@@ -76,7 +95,7 @@ height: 10vh;
 }
 
 .section p {
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin-bottom: 20px;
     color: white;
     
@@ -85,13 +104,19 @@ height: 10vh;
 
 /* Centering container */
 .content {
-    max-width: 600px;
-}
+   max-width: 600px;
+   /* background-color: red; */
+   justify-self: center;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+    /* background-color: #FFA500;*/
+} 
 
 /* Section-specific colors and background images */
 .section-background {
     background-image: url('../assets/about-background-bg.png');
-    color: #ffffff;
+    background-position: center;
 }
 
 .section-beliefs {
@@ -101,12 +126,12 @@ height: 10vh;
 
 .section-mission-vision {
     background-image: url('../assets/about-mission-vision-bg.png');
-    color: #ffffff;
+
 }
 
 .section-vision-2027 {
-    background-image: url('../assets/about-vision-2027-bg.png');
-    color: #ffffff;
+    background-image: url('../assets/about-vision-2027-bg-430px.png');
+
 }
 
 .styled-list {
@@ -142,20 +167,38 @@ height: 10vh;
 }
 
 
-.section-vision-2027.left-align {
+/* .section-vision-2027.left-align {
     justify-content: flex-start;
     text-align: left;
-}
+} */
 
 .section-beliefs p{
     color: black;
-    text-align: left;
+    text-align: center;
+}
+
+.our-beliefs {
+   font-weight: 800;
+}
+
+.belief-points{
+font-weight: 600;
 }
 
 .section-beliefs h2{
     margin-top: 2rem;
     color: black;
-    text-align: left;
+    text-align: center;
+}
+
+.section-vision-2027 h1{
+    font-size: 4rem;
+    font-style: oblique;
+    font-weight: 900;
+    letter-spacing: -3px;
+    color: #ffbf00;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+
 }
 
 
@@ -167,11 +210,6 @@ height: 10vh;
 font-weight: 600;
 }
 
-.section-background h2,
-.section-mission-vision h2, 
-.section-vision-2027 h2{
-
-}
 
 /* Link Styling */
 .section .link {
@@ -186,7 +224,8 @@ font-weight: 600;
 
 .section-vision-2027 p{
     margin-top: 5rem;
-    text-align: left;
+    text-align: center;
+    /* background-color: red; */
 }
 
 .white-seperate{
@@ -197,4 +236,127 @@ font-weight: 600;
 .black-seperate{
     height: 10vh;
     background-color: #0d0d0d;
+}
+
+
+/*
+
+GENERAL FOR 576+ px
+
+*/
+@media (min-width: 576px){
+
+    .section {
+
+        /* padding: 150px 45px; */
+        /* justify-self: center; */
+
+    }
+    
+
+    .section p {
+        font-size: 1rem;
+      
+        
+        
+    }
+
+    .section-beliefs p{
+        text-align: left;
+    }
+    
+    .section-beliefs h2{
+ 
+   
+        text-align: left;
+    }
+    
+    
+
+  
+  
+}
+
+/*
+
+GENERAL FOR 768px+ px
+
+*/
+
+@media (min-width: 768px){
+    .section-vision-2027 {
+        /* background-image: url('../assets/about-vision-2027-bg-768px.png'); */
+    
+    }
+
+    .section-vision-2027 h1{
+        font-size: 6rem;
+    }
+
+    .section-vision-2027 p{
+        text-align: left;
+        }
+        .hero-content h1 {
+
+            font-size: 3.5rem;
+
+        }
+        
+        .hero-content h2 {
+
+            font-size: 3.5rem;
+
+        }
+        
+
+}
+
+/*
+
+GENERAL FOR 992px+ px
+
+*/
+
+@media (min-width: 992px) {
+
+    .hero-content {
+        /* display: none; */
+    }
+    
+
+}
+
+/* Media Query for Small Screens */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+ 
+}
+
+/* Large screens (standard desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero {
+        /* background-image: url('../assets/about-hero-bg-992px.png');  */
+    }
+
+}
+
+/* Extra large screens (large desktops) */
+@media (min-width: 1200px) {
+    .hero {
+        height: 55vh;
+        background-image: url('../assets/about-hero-bg-992px.png'); 
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+    
+    }
+
+    .section-vision-2027 {
+        background-image: url('../assets/about-vision-2027-bg-1200px.png');
+    
+    }
+    
 }

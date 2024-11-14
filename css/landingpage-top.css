@@ -30,7 +30,7 @@
   opacity: 0;
   transform: translateY(-50px);
   transition: transform 1s ease, opacity 1s ease, background-color 1s ease; /* Smooth slide, fade, and color change */
-margin-top: 10vh;
+  margin-top: 10vh;
 }
 
 
@@ -118,28 +118,31 @@ margin-top: 10vh;
 /*SENIOR PASTOR SECTION*/
 
 .senior-pastor-section {
-  position: relative;
-  height: 75vh;
-  background: url('../assets/seniorpastor-bg-small.png');
+  /* height: 100%; */
+  background: url('../assets/seniorpastor-bg-430px.png');
   transition: background-size 1.5s ease, background-position 1.5s ease;
-  overflow: hidden;
-  background-repeat: no-repeat;
   width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 
-  /* justify-content: start; */
+
   /* background-color: blue; */
 
 } 
 
   
   .text-content {
+    display: flex;
+    flex-direction: column;
     color: rgb(0, 0, 0);
     justify-content: center;
-    max-width: 100%;
-    max-height: 100%;
+
     text-align: center;
+    justify-content: center;
     transform: scale(0.7);
     /* background-color: #ffcc00; */
+    height: 100%;
   }
   
   .text-content h1 {
@@ -147,13 +150,13 @@ margin-top: 10vh;
     font-weight: 700;
     color: #ffeb3b;
 
-
   }
   
   .text-content h2 {
     font-size: 2.5rem;
     font-weight: 900;
-   
+    margin: unset;
+    margin-top: 1rem;
     
   }
   
@@ -161,12 +164,14 @@ margin-top: 10vh;
     font-size: 2rem;
     font-weight: 900;
     color: white;
+    margin: unset;
   }
   
   .text-content h4 {
     font-size: 1.5rem;
     font-weight: 600;
     color: #000000;
+    margin-top: 1rem;
 
   }
   
@@ -174,7 +179,7 @@ margin-top: 10vh;
     font-size: 1rem;
     line-height: 1.6;
    
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
     font-weight: 800;
   }
   
@@ -197,7 +202,7 @@ margin-top: 10vh;
     margin-right: 20px;
     color: white;
     transition: color 0.3s ease;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.548);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
 
   }
   
@@ -218,28 +223,43 @@ margin-top: 10vh;
     animation: hidePlatforms 2s ease 2s forwards;
   }
 
-  .senior-pastor-section.fade-in {
-    background-size: 100%; /* Zooms in and settles when user scrolls into view */
+   .senior-pastor-section.fade-in {
+    background-size: 110%; 
     background-position: center;
 
   }
   
   .senior-pastor-section.fade-out {
-    background-size: 110%; /* Zooms out when the user scrolls out */
-    background-position: top; /* Moves background upward */
-   
-  }
-  
+    background-size: 120%; 
+    background-position: center;
+  } 
+
+  .follow-platforms,
   .senior-pastor-section .text-content h1,
-  .senior-pastor-section .text-content h2,
-  .senior-pastor-section .text-content h3,
-  .senior-pastor-section .text-content h4,
-  .senior-pastor-section .text-content p {
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.548);
+  /* .senior-pastor-section .text-content h2, */
+  .senior-pastor-section .text-content h3
+  /* .senior-pastor-section .text-content h4, */
+  /* .senior-pastor-section .text-content p */
+   {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+  }
+
+  .divider{
+    min-height: 5vh;
+    background-color: #ffffff ;
+  }
+
+  .divider-msg{
+    font-size: 1rem;
+    color: rgb(15, 0, 66);
+    text-align: center;
+  font-weight:900;
+  font-style: italic;
   }
 
 /* What's On Section Content */
 .whats-on-section {
+height: 80vh;
 position: relative;
 height: 100%;
 background-color: #071b44;
@@ -247,12 +267,24 @@ overflow: hidden;
 
 }
 
-.whats-on-video-small {
+.whats-on-video-360px {
   display: block;
-  width: 100%; /* Adjust as needed */
+  width: 100%;
 }
-.whats-on-video-big {
+
+.whats-on-video-576px {
   display: none;
+  width: 100%;
+}
+
+.whats-on-video-768px {
+  display: none;
+  width: 100%;
+}
+
+.whats-on-video-992px {
+  display: none;
+  width: 100%;
 }
 
 .whats-on-content {
@@ -265,20 +297,19 @@ overflow: hidden;
   
  /* Next Steps Section */
  .next-steps-section {
-  height: 50vh;
+  min-height: 55vh;
   background-color: rgb(175, 175, 175);
   background-image: url('../assets/next-steps-bg.png');
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
   position: relative;
-  display: block;
-  /* justify-content: center;*/
-  /* align-items: center; */
-  text-align: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: white;
   transition: ease-in-out 1.5s;
-  padding: 2.5rem;
 }
 .next-steps-section:hover{
   /* transform: scale(1.01);
@@ -286,10 +317,8 @@ overflow: hidden;
 }
 
 .next-steps-content {
-  z-index: 1;
-  /* padding: 20px; */
-  /* width: 100%; */
-  /* background-color: #4b0082; */
+  /* background-color: red;
+  z-index: 1; */
 }
 
 .next-steps-content h2 {
@@ -309,7 +338,7 @@ overflow: hidden;
   display: block;
   justify-self: center;
 /* background-color: #ffcc00; */
-width: 80%;
+  width: 80%;
 }
 
 .next-step-link {
@@ -320,14 +349,13 @@ width: 80%;
 .next-step-card {
   display: flex;
   align-items: center;
-  display: inline-block; /* Behaves like inline element but respects width and padding */
+  display: inline-block;
   white-space: nowrap; /* Ensure text stays on one line */
   background-color: rgb(255, 255, 255);
   padding: 5px 30px;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
   border-radius: 30px;
-
   font-size: 0.8rem;
   transition: background-color 0.3s, transform 0.3s;
   color: #000;
@@ -352,13 +380,13 @@ width: 80%;
 
 /*Animations*/
 /* Initial state for animation */
-.whats-on-content, .publishing-section {
+.whats-on-content{
     opacity: 1;
     /* transform: translateX(50px); Initially offset slightly */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
 }
 
-.whats-on-content.animate-in, .publishing-section.animate-in {
+.whats-on-content.animate-in {
     opacity: 1;
     transform: translateX(0); /* Move to original position */
 }
@@ -371,8 +399,17 @@ width: 80%;
 GENERAL FOR 576+ px
 
 */
+
+@media (max-width: 576px){
+  .text-content {
+  padding-top: 4.5rem;
+  }
+}
 @media (min-width: 576px){
 
+  .whats-on-video-360px {
+    display: none;
+  }
 
   
   
@@ -396,30 +433,17 @@ GENERAL FOR 768 px
     font-size: 0.7rem;
   }
 
-  .senior-pastor-section {
+  /* .senior-pastor-section {
 
     background: url('../assets/seniorpastor-bg.png');
-    background-repeat: no-repeat;
 
   }
+ */
 
 
 
-  .text-content {
-    justify-content: center;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    max-width: 60%;
-    transform: scale(1.1);
-  }
 
-  .whats-on-video-small {
-    display: none;
-}
-.whats-on-video-big {
-    display: block;
-    width: 100%; /* Adjust as needed */
-}
+
 }
     
 
@@ -431,13 +455,25 @@ GENERAL FOR 992px+ px
 
 @media (min-width: 992px) {
 .senior-pastor-section{
-  height: 100vh;
-
+  height: 80vh;
 }
+
+.text-content {
+  color: rgb(0, 0, 0);
+  margin-left: 5rem;
+}
+
 }
 
 /* Media Query for Small Screens */
 @media (min-width: 576px) and (max-width: 767.98px) {
+
+  .senior-pastor-section{
+    background: url('../assets/seniorpastor-bg-576px.png');
+  }
+  .whats-on-video-576px {
+    display: block;
+  }
 
  
 }
@@ -445,32 +481,44 @@ GENERAL FOR 992px+ px
 /* Media Query for Small Screens */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .text-content {
-    padding: 2,5rem;
-  transform: scale(0.8);
+    margin-top: 0rem;
+    margin-left: 2rem;
+    padding-top: 3rem;
+  transform: scale(0.9);
+  width: 70%;
+  justify-self: center;
   }
 
   .senior-pastor-section{
-    background-size: contain;
-    /* padding-top: 2px; */
+    background: url('../assets/seniorpastor-bg-768px.png');
   }
 
- 
+  .whats-on-video-576px {
+    display: block;
+  }
+
 }
 
 /* Large screens (standard desktops) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .senior-pastor-section {
-    padding-top: 8rem;
     background-size: cover;
-    background-image: url('../assets/seniorpastor-bg-992.png');
+    background-image: url('../assets/seniorpastor-bg-992px.png');
   
   }
 
   .text-content {
-    color: rgb(0, 0, 0);
-    transform: scale(1);
-    margin-left: 5rem;
-    margin-top: 5rem;
+    padding-top: 8rem;
+    align-items: start;
+    text-align: left;
+    justify-content: center;
+    transform: scale(0.8);
+    width: 40%;
+  }
+
+
+  .whats-on-video-992px {
+    display: block;
   }
 
 }
@@ -479,18 +527,30 @@ GENERAL FOR 992px+ px
 @media (min-width: 1200px) {
   .senior-pastor-section {
     height: 100vh;
+    background-image: url('../assets/seniorpastor-bg-1200px.png');
+  
   }
 
   .text-content {
+
     color: rgb(0, 0, 0);
-    max-width: 35rem;
-    align-items: center;
-    text-align: center;
+    
+    align-items: start;
+    text-align: left;
     justify-content: center;
-    transform: scale(1.1);
-    margin-left: 5rem;
-    margin-top: 9rem;
-    /* background-color: #ffcc00; */
+    transform: scale(0.9);
+    width: 40%;
+
+  }
+
+  .giving-section {
+
+    background-image: url('../assets/giving-bg-.png');
+
+  }
+
+  .whats-on-video-992px {
+    display: block;
   }
   
 

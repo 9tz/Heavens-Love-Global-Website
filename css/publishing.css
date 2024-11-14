@@ -1,7 +1,18 @@
+
+ /* Base styles - Mobile-first (for screens below 576px) */
+
+
+/*GENERAL ATTRIBUTES FOR ALL SCREENS ABOVE A SIZE*/
+
 /* Hero Section */
+/* .whats-new-section{
+    background-color: red;
+} */
+
+
 .hero {
-    height:50vh;
-    background-image: url('../assets/store-hero-bg.png');
+    min-height:100vh;
+    background-image: url('../assets/store-hero-bg-430px.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -9,16 +20,33 @@
     align-items: center;
     color: white;
     text-align: center;
+    margin-top: 10vh;
+}
+
+.hero-content{
+    padding-top: 10rem;
+    /* background-color: red; */
+  
 }
 
 .hero-content h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 900; /* Thickest Montserrat font */
     text-transform: uppercase;
+margin: unset;
+
+text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+
+  
+
+}
+
+.hero-content h1, .hero-content p {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin-top: 10px;
 }
 
@@ -49,8 +77,8 @@
 
 /* What's New Section */
 .whats-new-section {
-    height: 100vh;
-    background-image: url('../assets/store-whatsnew-bg.png');
+    min-height: 100vh;
+    background-image: url('../assets/store-whatsnew-bg-430px.png');
     background-size: cover;
     background-position: center;
     color: white;
@@ -79,14 +107,12 @@
 }
 
 /* Rest of the What's New Section */
-.new-release {
+/* .new-release {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    z-index: 3; /* Ensures the content is on top of the red banner */
-    position: relative;
-}
+    flex-direction: column;    position: relative;
+} */
 
 .seperation-white{
     background-color: rgb(0, 0, 0);
@@ -104,8 +130,8 @@
 
 /* Merch Section */
 .merch-section {
-    height: 100vh;
-    background-image: url('../assets/publishing-merch-bg.png');
+    min-height: 100vh;
+    background-image: url('../assets/publishing-merch-bg-430px.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -115,6 +141,15 @@
     padding: 0;
     overflow: hidden;
     transition: ease-in-out 1s;
+
+    display: flex;
+    position: relative;
+    /* background-color: #ffcc00; */
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+     height: 100%;
+     padding: 4rem;
 }
 
 .merch-section:hover {
@@ -132,13 +167,7 @@
     z-index: 1;
 }
 
-.merch-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    z-index: 2;
-}
+
 
 
 
@@ -213,7 +242,7 @@
     padding: 40px 20px;
     text-align: center;
     background-color: #f5f5f5;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .material-content h1 {
@@ -308,6 +337,20 @@
     background-color: #ffbf00;
 }
 
+
+
+
+.whats-new-section{
+    display: flex;
+    position: relative;
+    /* background-color: #ffcc00; */
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+
+    
+}
+
 /* Pub Button Styling */
 .get-yours-button {
     padding: 8px 24px; /* Decrease padding for a smaller button */
@@ -320,29 +363,163 @@
     font-weight: 800;
     text-transform: uppercase;
     transition: all 0.3s ease; /* Add transition for hover effect */
-    position: absolute;
-    top: 85%; /* Adjust as needed */
-    left: 50%; /* Adjust as needed */
-    transform: translate(110%, 840%); /* Centers the button based on its own size */
+    position: relative;
     white-space: nowrap;
+  margin-right: 1rem;
   }
   
   .get-yours-button:hover {
 
-        padding: 8px 24px; /* Decrease padding for a smaller button */
-        font-size: 0.9rem; /* Slightly smaller font size */
-        background-color: rgb(0, 0, 0);
-        border: 1.5px solid white;
-        color: #ffffff;
-        border-radius: 50px; /* Rounded corners */
-        cursor: pointer;
-        font-weight: 800;
-        text-transform: uppercase;
-        transition: all 0.3s ease; /* Add transition for hover effect */
-        position: absolute;
-        top: 85%; /* Adjust as needed */
-        left: 50%; /* Adjust as needed */
-        transform: translate(110%, 840%); /* Centers the button based on its own size */
-        white-space: nowrap;
-        /* transform: scale(1.05); */
+    background-color: #0d0d0d;
+    color: #ffffff;
+    transform: scale(1.05); /* Very slight increase in size on hover */
+}
+
+.view-catalog-button {
+    padding: 8px 24px; /* Decrease padding for a smaller button */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    background-color: white;
+    border: 1.5px solid white;
+    color: #000000;
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: all 0.3s ease; /* Add transition for hover effect */
+    position: relative;
+    white-space: nowrap;
+  margin-right: 1rem;
+  }
+  
+  .view-catalog-button:hover {
+
+    background-color: #0d0d0d;
+    color: #ffffff;
+    transform: scale(1.05); /* Very slight increase in size on hover */
+}
+
+
+
+/*
+
+GENERAL FOR 576+ px
+
+*/
+@media (min-width: 576px){
+
+
+
+}
+
+/*
+
+GENERAL FOR 768px+ px
+
+*/
+
+@media (min-width: 768px){
+
+    .hero-content h1{
+        /* min-height:50vh; */
+        /* background-image: url('../assets/store-hero-bg-768px.png'); */
+  
+            font-size: 4rem;
+    }
+    
+    .whats-new-section {
+        /* min-height: 100vh; */
+        /* background-image: url('../assets/store-whatsnew-bg-768px.png'); */
+    }
+
+}
+
+/*
+
+GENERAL FOR 992px+ px
+
+*/
+
+@media (min-width: 360px) and (max-width: 576px) {
+
+    .whats-new-section {
+        min-height: 80vh;
+        background-image: url('../assets/store-whatsnew-bg-430px.png');
+    }    
+  
+    .merch-section{
+
+        background-image: url('../assets/publishing-merch-bg-360px.png');
+background-position: center;
+background-size: cover;
+
+    }
+    
+ .view-catalog-button{
+    margin-right: 4rem;
+ }
+
+}
+
+/* Media Query for Small Screens */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .whats-new-section {
+        background-image: url('../assets/store-whatsnew-bg-560px.png');
+    }
+
+    .merch-section{
+        background-image: url('../assets/publishing-merch-bg-360px.png');
+
+    }
+
+  
+ 
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .whats-new-section {
+        background-image: url('../assets/store-whatsnew-bg-560px.png');
+    }
+  
+    .merch-section{
+        background-image: url('../assets/publishing-merch-bg-992px.png');
+
+    }
+
+}
+
+
+
+
+/* Large screens (standard desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .whats-new-section {
+        background-image: url('../assets/store-whatsnew-bg-1200px.png');
+    }
+
+    .merch-section{
+        background-image: url('../assets/publishing-merch-bg-992px.png');
+
+    }
+
+}
+
+/* Extra large screens (large desktops) */
+@media (min-width: 1200px) {
+
+    .hero {
+        /* min-height:50vh; */
+        /* background-image: url('../assets/store-hero-bg-1200px.png'); */
+    }
+
+    .whats-new-section {
+        min-height: 100vh;
+        background-image: url('../assets/store-whatsnew-bg-1200px.png');
+    }
+
+    .merch-section{
+        background-image: url('../assets/publishing-merch-bg-1200px.png');
+
+    }
+
+    
 }

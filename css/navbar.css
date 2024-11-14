@@ -1,4 +1,4 @@
- /* Base styles - Mobile-first (for screens below 576px) */
+/* Base styles - Mobile-first (for screens below 576px) */
 
 /* Navbar Styling for Mobile */
 .navbar {
@@ -14,6 +14,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   /* background-color: aqua; */
   padding: 2rem;
+  /* min-height: 13vh; */
 
   
 }
@@ -266,15 +267,16 @@ cursor: pointer;
     margin-left: 20px;
   }
   
-    .social-icons a {
+  .social-icons a {
       color: rgb(0, 0, 0);
-      font-size: 0.7rem;
+      font-size: 1rem;
       margin-left: 15px;
       transition: color 0.3s;
-    }
+  }
     
-    .social-icons a:hover {
+  .social-icons a:hover {
       color: rgb(255, 187, 0); /* Optional hover color for social icons */
-    }
-    
+  }
+
+  
 }

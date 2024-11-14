@@ -1,37 +1,52 @@
 
+     /* Base styles - Mobile-first (for screens below 576px) */
+
+
+/*GENERAL ATTRIBUTES FOR ALL SCREENS ABOVE A SIZE*/
+
+
 /* Hero Section */
 .hero-min-arms {
  
     height: 55vh; /* Hero section gets 35% of total height */
-    background-image: url('../assets/iwts-hero-bg.png');
+    background-image: url('../assets/iwts-hero-bg-430px.png');
     background-size: cover;
+    background-position: center;
     color: white;
-    background-color: red;
+    /* background-color: red; */
     margin-top: 13vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 
 }
 
-.hero h1 {
-    font-size: 40px;
+.hero-min-arms h1 {
+    font-size: 3rem;
     font-weight: 900;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+
 }
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    /* padding: 20px; */
-    font-weight: 500;
-}
+
 
 /* Navigation Menu Section */
 .nav-menu-section {
-    height: 30vh; /* Nav menu gets 65% of total height */
+    min-height: 30vh; /* Nav menu gets 65% of total height */
     background-image: url('../assets/nav-menu-section.png');
-background-color: #0c0c0c;
     position: relative;
-    display: flex;
     justify-content: center;
     color: white;
-    margin-top: 0.7rem;
+    padding: 5px;
+}
+
+.menu-buttons {
+    width: 80%;
+    display: block;
+    /* background-color: #FFA500; */
+    justify-self: center;
+    /* justify-content: space-between; */
+    /* padding: 10px; */
 }
 
 /* .nav-menu-section .overlay {
@@ -57,32 +72,23 @@ background-color: #0c0c0c;
 }
 
 .nav-menu-section .menu-content p {
-    font-size: 15px;
-    /* margin-top: 10px; */
+    display: none;
 }
 
-.menu-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* margin-top: 20px; */
-    padding: 10px;
-}
-
-.menu-btn {
-    display: inline-block; /* Behaves like inline element but respects width and padding */
-    white-space: nowrap; /* Ensure text stays on one line */
-    background-color: rgb(255, 255, 255); /* Same background as next-step-card */
-    padding: 5px 30px; /* Same padding as next-step-card */
-    border-radius: 30px; /* Rounded corners */
-    font-size: 13px; /* Same font size */
-    text-decoration: none; /* Remove underline from links */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth animation */
-    color: #000; /* Black text */
-    margin: 10px; /* Add margin to create space between buttons */
+.menu-btn {   
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    padding: 5px 30px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    color: #000;
     font-weight: 600;
     border-width: 1.4px;
-    color: #000000; /* White text on hover */
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+  
   }
   
   .menu-btn:hover {
@@ -95,26 +101,27 @@ background-color: #0c0c0c;
   }
 
   /* General Formatting */
+
   .ministry-description{
-align-items: center;
-justify-content: center;
+display: flex;
+flex-direction: column;
+justify-self: center;
+/* background-color: #FFA500; */
+color: white;
   }
   
 
   .director-avatar img {
-    border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
-    object-fit: cover;
+display: none;
  
 }
 
 
 .ministry-description h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 900;
   
-    letter-spacing: -4px;
+    letter-spacing: -2px;
 }
   
 
@@ -129,15 +136,21 @@ justify-content: center;
     font-size: 1rem;
     line-height: 1.5;
     max-width: 25rem;
+    align-self: center;
+    text-align: center;
+    /* background-color: blue; */
 }
 
 .section-content{
     display: flex;
-    /* align-items: center; */
-    margin-top: 4rem;
+    /* flex-direction: column; */
+    color: black;
+    padding-top: 4rem; 
     justify-content: center;
+    text-align: center;
     gap: 4rem;
     flex: 1;
+    /* background-color: red; */
 }
 
 
@@ -170,27 +183,25 @@ justify-content: center;
 
 /* Music Ministry Section */
 .music-ministry-section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    background-image: url('../assets/iwts-music-bg.png');
+    background-image: url('../assets/iwts-music-bg-430px.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    /* padding: 50px 20px; */
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
-    /* gap: 20px; */
+
+
 }
 
+.music-ministry-section h1, .music-contact{
+    /* display: inline-block; */
+    background-image: linear-gradient(3deg, #feaa00 0%, #ffb92d 100%);
+      padding: 20px;
+      border-radius: 10px;  
+  }
 
-
-
-
-
-
+  
 
 .highlight-music {
     color: #FFA500; /* Orange color to highlight */
@@ -202,22 +213,27 @@ justify-content: center;
     font-weight: bold;
 }
 
+
 /* Publishing Ministry Section */
 .publishing-ministry-section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    background-image: url('../assets/iwts-publishing-bg.png');
+    background-image: url('../assets/iwts-publishing-bg-430px.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    /* padding: 50px 20px; */
+
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
-    /* gap: 20px; */
+
 }
+
+.publishing-ministry-section h1, .publishing-contact{
+    background-image: linear-gradient(3deg, #0194ff 0%, #0932ff 100%);
+      padding: 20px;
+      border-radius: 10px;
+  }
+
 
 .highlight-publishing {
     color: #FFA500;
@@ -229,38 +245,25 @@ justify-content: center;
     font-weight: bold;
 }
 
+
 /* Networks Ministry Section */
 .networks-ministry-section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    background-image: url('../assets/iwts-networks-bg.png');
+    background-image: url('../assets/iwts-networks-bg-430px.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    /* padding: 50px 20px; */
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
-    /* gap: 20px; */
-}
 
-/* Join Networks Ministry Section */
-.join-networks-ministry-section {
-    height: 100vh;
-    position: relative;
-    background-image: url('../assets/iwts-networks-bg2.png');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 20px;
-    color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+
 }
+.networks-ministry-section h1, .networks-contact{
+    background-image: linear-gradient(3deg, #cf00fd 0%, #4300ea 100%);
+      padding: 20px;
+      border-radius: 10px;
+  }
 
 .highlight-networks {
     color: #FFA500;
@@ -274,37 +277,21 @@ justify-content: center;
 
 /* Holdings Ministry Section */
 .holdings-ministry-section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    background-image: url('../assets/iwts-holdings-bg.png');
+    background-image: url('../assets/iwts-holdings-bg-430px.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    /* padding: 50px 20px; */
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
-    /* gap: 20px; */
-}
 
-
-/* Join Holdings Ministry Section */
-.join-holdings-ministry-section {
-    height: 100vh;
-    position: relative;
-    background-image: url('../assets/iwts-holdings-bg2.png');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 20px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
 }
+.holdings-ministry-section h1, .holdings-contact{
+    background-image: linear-gradient(3deg, #f9d476 0%, #fbc63e 100%);
+      padding: 20px;
+      border-radius: 10px;
+  }
 
 .highlight-holdings {
     color: #FFA500;
@@ -318,38 +305,23 @@ justify-content: center;
 
 /* Ushering and Protocol Ministry Section */
 .up-ministry-section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    background-image: url('../assets/iwts-up-bg.png');
+    background-image: url('../assets/iwts-up-bg-430px.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    /* padding: 50px 20px; */
+
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
-    /* gap: 20px; */
+
 }
 
-
-
-/* Join Ushering and Protocol Ministry Section */
-.join-up-ministry-section {
-    height: 100vh;
-    position: relative;
-    background-image: url('../assets/iwts-up-bg2.png');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 20px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+.up-ministry-section h1, .up-contact{
+    background-image: linear-gradient(3deg, #f20000 0%, #880101 100%);
+      padding: 20px;
+      border-radius: 10px;
+  }
 
 .highlight-up {
     color: #FFA500;
@@ -363,38 +335,22 @@ justify-content: center;
 
 /* Secretariat Ministry Section */
 .secretariat-ministry-section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    background-image: url('../assets/iwts-secretariat-bg.png');
+    background-image: url('../assets/iwts-secretariat-bg-430px.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    /* padding: 50px 20px; */
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
-    /* gap: 20px; */
+
 }
 
-
-
-/* Join Secretariat Ministry Section */
-.join-secretariat-ministry-section {
-    height: 100vh;
-    position: relative;
-    background-image: url('../assets/iwts-secretariat-bg2.png');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 20px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+.secretariat-ministry-section h1, .secretariat-contact{
+    background-image: linear-gradient(3deg, #0002f0 0%, #00017e 100%);
+      padding: 20px;
+      border-radius: 10px;
+  }
 
 .highlight-secretariat {
     color: #FFA500;
@@ -405,6 +361,7 @@ justify-content: center;
     color: #FFA500;
     font-weight: bold;
 }
+
 
 
 
@@ -571,3 +528,165 @@ justify-content: center;
     opacity: 0; /* Hidden by default */
 }
 
+.min-contact{
+    font-weight: 600;
+    transition: ease-in-out 0.5s;
+    }
+
+    .min-contact:hover{
+        font-weight: 600;
+        transition: ease-in-out 0.5s;
+        transform: scale(1.02);
+        }
+
+
+/*
+
+GENERAL FOR 576+ px
+
+*/
+@media (max-width: 576){
+
+}
+@media (min-width: 576px){
+
+
+  
+  
+}
+
+/*
+
+GENERAL FOR 768px+ px
+
+*/
+
+@media (max-width: 768px){
+    .section-content{
+        display: flex;
+        flex-direction: column;
+        color: black;
+        padding-top: 4rem; 
+        justify-content: center;
+        text-align: center;
+        gap: 4rem;
+        flex: 1;
+        /* background-color: red; */
+    }
+
+}
+
+/*
+
+GENERAL FOR 992px+ px
+
+*/
+
+@media (min-width: 992px) {
+
+    .director-avatar img {
+        border-radius: 50%;
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        display:flex
+     
+    }
+
+    .section-content{
+       
+        /* margin-top: 4rem; */
+        justify-content: center;
+ 
+    }
+
+    .ministry-description h1 {
+        font-size: 2.5rem;
+        letter-spacing: -4px;
+        background-image: none;
+        padding: 0;
+    }
+
+    /* .hero-min-arms h1{
+        display: none;
+    } */
+    
+    .nav-menu-section .menu-content p {
+        display: flex;
+        font-size: 0.8rem;
+        justify-self: center;
+    }
+
+    .section-content{
+        display: flex;
+        color: black;
+        /* margin-top: 4rem; */
+        justify-content: center;
+        text-align: center;
+        gap: 4rem;
+        flex: 1;
+        /* background-color: red; */
+    }
+
+    
+
+}
+
+/* Media Query for Small Screens */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+ 
+}
+
+/* Large screens (standard desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero-min-arms h1{
+        font-size: 4rem;
+        }
+
+
+
+}
+
+/* Extra large screens (large desktops) */
+@media (min-width: 1200px) {
+
+    .min-contact{
+        display: none;
+    }
+
+    .ministry-description h1{
+            background-image: none;
+            padding: 0;
+    }
+
+    .hero-min-arms h1{
+        font-size: 5rem;
+        }
+
+    .music-ministry-section{
+        background-image: url('../assets/iwts-music-bg-1200px.png');
+
+    }
+    .publishing-ministry-section{
+        background-image: url('../assets/iwts-publishing-bg-1200px.png');
+
+    }
+    .networks-ministry-section{
+        background-image: url('../assets/iwts-networks-bg-1200px.png');
+
+    }
+    .up-ministry-section{
+        background-image: url('../assets/iwts-up-bg-1200px.png');
+
+    }
+    .secretariat-ministry-section{
+        background-image: url('../assets/iwts-secretariat-bg-1200px.png');
+
+    }
+    .holdings-ministry-section{
+        background-image: url('../assets/iwts-holdings-bg-1200px.png');
+
+    }
+
+}

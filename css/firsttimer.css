@@ -1,3 +1,9 @@
+ /* Base styles - Mobile-first (for screens below 576px) */
+
+
+/*GENERAL ATTRIBUTES FOR ALL SCREENS ABOVE A SIZE*/
+
+
 body {
     font-family: Montserrat, sans-serif;
     margin: 0;
@@ -58,51 +64,60 @@ body {
 }
 
 /* Video Section */
-/* Video Section */
 .video-section {
     position: relative;
     text-align: center;
     padding: 40px 20px;
-    background-color: rgb(255, 255, 255);
     min-height: 80vh;
-    
-    /* Flex layout to stack items vertically */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Space between video and download button */
+    gap: 20px; /* Space between image and download button */
 }
 
 .video-container {
-    width: 70%; /* Adjust this to control the width of the video */
-    max-width: 800px; /* Optional max width */
-    aspect-ratio: 16 / 9; /* Maintain the video aspect ratio */
+    width: 70%; /* Adjust this to control the width of the image */
+    max-width: 800px;
     position: relative;
-    overflow: hidden;
+    /* Removed aspect-ratio and overflow */
+    /* aspect-ratio: 16 / 9; */
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.brochure-image{
+.brochure-image {
+    width: 100%;
+    height: auto;
     transition: ease-in-out 1s;
     border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
-.brochure-image:hover{
+.brochure-image:hover {
     transform: scale(1.02);
     transition: ease-in-out 1s;
     border-radius: 10px;
 }
+
 .download-button a {
     background-color: #000;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 5rem;
 }
 
 .download-button a:hover {
     background-color: #333;
 }
+
 
 video {
     position: absolute;
@@ -177,4 +192,151 @@ video {
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
+}
+
+
+/* POP UP SETTINGS*/
+/* Popup Overlay */
+/* Popup Overlay */
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black background */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* Removed 'display: flex;' which was overriding 'display: none;' */
+}
+
+
+/* Popup Content */
+.popup-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.popup-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    cursor: zoom-in;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+/* View Brochure Button */
+.view-brochure-button {
+    display: none; /* Hidden by default */
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    z-index: 1; /* Ensure it appears above other elements */
+}
+
+.tap-to-view-brochure{
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    width: 60%;
+    align-self: center;
+
+}
+
+/* Media Query for Button Visibility */
+@media (min-width: 430px) and (max-width: 992px) {
+    /* .view-brochure-button {
+        display: inline-block;
+    } */
+
+    /* Hide the brochure image on smaller screens */
+    /* .brochure-image {
+        display: none;
+    } */
+}
+
+
+/*
+
+GENERAL FOR 576+ px
+
+*/
+@media (min-width: 576px){
+.brochure-image{
+    cursor: default;
+}
+
+.tap-to-view-brochure{
+    display: none;
+
+}
+
+
+  
+  
+}
+
+/*
+
+GENERAL FOR 768px+ px
+
+*/
+
+@media (min-width: 768px){
+
+
+}
+
+/*
+
+GENERAL FOR 992px+ px
+
+*/
+
+@media (min-width: 992px) {
+
+
+}
+
+/* Media Query for Small Screens */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+ 
+}
+
+/* Large screens (standard desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+
+}
+
+/* Extra large screens (large desktops) */
+@media (min-width: 1200px) {
+
+    
 }

@@ -5,14 +5,14 @@ window.addEventListener("scroll", function () {
     const siteTitle = document.querySelector(".site-title");
 
     if (window.scrollY > 0) {
-        navbar.style.height = "";
+        navbar.style.height = "10vh";
         if (heroSection) {
             navbar.style.height = "2rem";
         }
         logo.style.height = "3rem"; // Smaller logo when scrolled
         siteTitle.style.fontSize = "1rem"; // Smaller title size when scrolled
     } else {
-        navbar.style.height = "";
+        navbar.style.height = "13vh";
         if (heroSection) {
             navbar.style.marginTop = "0rem";
         }
